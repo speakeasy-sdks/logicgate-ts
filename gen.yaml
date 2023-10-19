@@ -1,0 +1,15 @@
+configVersion: 1.0.0
+generation:
+  comments:
+    disableComments: false
+    omitDescriptionIfSummaryPresent: false
+  baseServerURL: ""
+  sdkClassName: Risk-Cloud-API
+  singleTagPerOp: false
+  tagNamespacingDisabled: false
+typescript:
+  version: 0.0.1
+  author: logicgate-dev
+  clientServerStatusCodesAsErrors: true
+  maxMethodParams: 0
+  packageName: Risk-Cloud-API
