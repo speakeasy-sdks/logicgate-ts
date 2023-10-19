@@ -164,6 +164,7 @@
         "summary": "Create a workflow",
         "description": "**Permissions:** [Build Access to parent application](https://help.logicgate.com/hc/en-us/articles/4402683190164-Control-Build-Access-for-Applications)\n\nCreate a workflow from a JSON request body. The workflow will contain a Default Origin step and a Default End step.",
         "operationId": "createWorkflow",
+        "x-speakeasy-usage-example": true,
         "parameters": [
           {
             "name": "Authorization",
