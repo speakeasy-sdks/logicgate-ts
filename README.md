@@ -7,15 +7,15 @@
 </div>
 
 <!-- Start SDK Installation -->
-# SDK Installation
+## SDK Installation
 
-## NPM
+### NPM
 
 ```bash
 npm add https://github.com/speakeasy-sdks/logicgate-ts
 ```
 
-## Yarn
+### Yarn
 
 ```bash
 yarn add https://github.com/speakeasy-sdks/logicgate-ts
@@ -24,16 +24,10 @@ yarn add https://github.com/speakeasy-sdks/logicgate-ts
 
 ## SDK Example Usage
 <!-- Start SDK Example Usage -->
-
-
 ```typescript
 import { Riskcloud } from "logicgate";
-import { CreateApplicationRequest } from "logicgate/dist/sdk/models/operations";
-import {
-    ApplicationApiCreateIn,
-    ApplicationApiCreateInIcon,
-    ApplicationApiCreateInType,
-} from "logicgate/dist/sdk/models/shared";
+import { CreateWorkflowRequest } from "logicgate/dist/sdk/models/operations";
+import { WorkflowApiCreateIn } from "logicgate/dist/sdk/models/shared";
 
 (async () => {
     const sdk = new Riskcloud({
@@ -44,14 +38,15 @@ import {
             },
         },
     });
-    const applicationApiCreateIn: ApplicationApiCreateIn = {
-        color: "#00a3de",
-        icon: ApplicationApiCreateInIcon.Cubes,
-        name: "Cyber Risk Management Application",
-        type: ApplicationApiCreateInType.ControlsCompliance,
+    const workflowApiCreateIn: WorkflowApiCreateIn = {
+        applicationId: "a1b2c3d4",
+        name: "Risk Assessments",
+        recordPrefix: "Assessment",
+        xpos: 20,
+        ypos: 20,
     };
 
-    const res = await sdk.application.create(applicationApiCreateIn);
+    const res = await sdk.workflow.create(workflowApiCreateIn);
 
     if (res.statusCode == 200) {
         // handle response
@@ -62,10 +57,10 @@ import {
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-# Available Resources and Operations
+## Available Resources and Operations
 
 
-## [application](docs/sdks/application/README.md)
+### [application](docs/sdks/application/README.md)
 
 * [create](docs/sdks/application/README.md#create) - Create an application
 * [delete](docs/sdks/application/README.md#delete) - Delete an application
@@ -73,19 +68,19 @@ import {
 * [readAll](docs/sdks/application/README.md#readall) - Retrieve applications
 * [update](docs/sdks/application/README.md#update) - Update an application
 
-## [authentication](docs/sdks/authentication/README.md)
+### [authentication](docs/sdks/authentication/README.md)
 
 * [getApiToken](docs/sdks/authentication/README.md#getapitoken) - Create an API Access Token
 
-## [field](docs/sdks/field/README.md)
+### [field](docs/sdks/field/README.md)
 
 * [readAll](docs/sdks/field/README.md#readall) - Retrieve fields
 
-## [record](docs/sdks/record/README.md)
+### [record](docs/sdks/record/README.md)
 
 * [readAll](docs/sdks/record/README.md#readall) - Retrieve records
 
-## [step](docs/sdks/step/README.md)
+### [step](docs/sdks/step/README.md)
 
 * [create](docs/sdks/step/README.md#create) - Create a step
 * [delete](docs/sdks/step/README.md#delete) - Delete a step
@@ -93,7 +88,7 @@ import {
 * [readAll](docs/sdks/step/README.md#readall) - Retrieve steps
 * [update](docs/sdks/step/README.md#update) - Update a step
 
-## [workflow](docs/sdks/workflow/README.md)
+### [workflow](docs/sdks/workflow/README.md)
 
 * [create](docs/sdks/workflow/README.md#create) - Create a workflow
 * [delete](docs/sdks/workflow/README.md#delete) - Delete a workflow
@@ -101,7 +96,7 @@ import {
 * [readAll](docs/sdks/workflow/README.md#readall) - Retrieve workflows
 * [update](docs/sdks/workflow/README.md#update) - Update a workflow
 
-## [workflowMap](docs/sdks/workflowmap/README.md)
+### [workflowMap](docs/sdks/workflowmap/README.md)
 
 * [create](docs/sdks/workflowmap/README.md#create) - Create a workflow map
 * [delete](docs/sdks/workflowmap/README.md#delete) - Delete a workflow map
@@ -111,8 +106,6 @@ import {
 <!-- End SDK Available Operations -->
 
 <!-- Start Dev Containers -->
-
-
 
 <!-- End Dev Containers -->
 
