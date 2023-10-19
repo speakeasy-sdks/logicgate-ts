@@ -1,0 +1,17 @@
+# ValuePropertyApiOutType
+
+The type of the value
+
+
+## Values
+
+| Name          | Value         |
+| ------------- | ------------- |
+| `Number`      | NUMBER        |
+| `Calculation` | CALCULATION   |
+| `Attachment`  | ATTACHMENT    |
+| `Date`        | DATE          |
+| `Option`      | OPTION        |
+| `User`        | USER          |
+| `Text`        | TEXT          |
+| `Other`       | OTHER         |

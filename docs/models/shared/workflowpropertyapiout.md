@@ -1,0 +1,13 @@
+# WorkflowPropertyApiOut
+
+The parent workflow of the step
+
+
+## Fields
+
+| Field                                                                        | Type                                                                         | Required                                                                     | Description                                                                  | Example                                                                      |
+| ---------------------------------------------------------------------------- | ---------------------------------------------------------------------------- | ---------------------------------------------------------------------------- | ---------------------------------------------------------------------------- | ---------------------------------------------------------------------------- |
+| `id`                                                                         | *string*                                                                     | :heavy_minus_sign:                                                           | The unique ID of this Risk Cloud resource                                    | a1b2c3d4                                                                     |
+| `name`                                                                       | *string*                                                                     | :heavy_minus_sign:                                                           | The name of the workflow                                                     | Risk Assessments                                                             |
+| `object`                                                                     | *string*                                                                     | :heavy_minus_sign:                                                           | Identifies the type of object this data represents                           | workflow                                                                     |
+| `recordPrefix`                                                               | *string*                                                                     | :heavy_minus_sign:                                                           | The prefix to be used in the name of every record created from this workflow | Assessment                                                                   |

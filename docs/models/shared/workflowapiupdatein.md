@@ -1,0 +1,13 @@
+# WorkflowApiUpdateIn
+
+Workflow (Update)
+
+
+## Fields
+
+| Field                                                                                 | Type                                                                                  | Required                                                                              | Description                                                                           | Example                                                                               |
+| ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- |
+| `name`                                                                                | *string*                                                                              | :heavy_minus_sign:                                                                    | The name of the workflow                                                              | Risk Assessments                                                                      |
+| `recordPrefix`                                                                        | *string*                                                                              | :heavy_minus_sign:                                                                    | The prefix to be used in the name of every record created from this workflow          | Assessment                                                                            |
+| `xpos`                                                                                | *number*                                                                              | :heavy_minus_sign:                                                                    | The x-coordinate of the workflow in the application builder (must not be less than 0) | 20                                                                                    |
+| `ypos`                                                                                | *number*                                                                              | :heavy_minus_sign:                                                                    | The y-coordinate of the workflow in the application builder (must not be less than 0) | 20                                                                                    |
