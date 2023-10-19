@@ -4,12 +4,12 @@ generation:
     disableComments: false
     omitDescriptionIfSummaryPresent: false
   baseServerURL: ""
-  sdkClassName: Risk-Cloud-API
+  sdkClassName: riskcloud
   singleTagPerOp: false
   tagNamespacingDisabled: false
 typescript:
   version: 0.0.1
   author: logicgate-dev
   clientServerStatusCodesAsErrors: true
-  maxMethodParams: 0
-  packageName: Risk-Cloud-API
+  maxMethodParams: 4
+  packageName: logicgate
