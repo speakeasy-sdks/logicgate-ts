@@ -84,7 +84,7 @@ import { DeleteApplicationRequest } from "logicgate/dist/sdk/models/operations";
       },
     },
   });
-const id: string = "program";
+const id: string = "string";
 
   const res = await sdk.application.delete(id);
 
@@ -128,7 +128,7 @@ import { ReadApplicationRequest } from "logicgate/dist/sdk/models/operations";
       },
     },
   });
-const id: string = "gadzooks";
+const id: string = "string";
 
   const res = await sdk.application.read(id);
 
@@ -227,7 +227,7 @@ const applicationApiUpdateIn: ApplicationApiUpdateIn = {
   restrictBuildAccess: false,
   type: ApplicationApiUpdateInType.ControlsCompliance,
 };
-const id: string = "Van";
+const id: string = "string";
 
   const res = await sdk.application.update(applicationApiUpdateIn, id);
 

@@ -87,7 +87,7 @@ import { DeleteStepRequest } from "logicgate/dist/sdk/models/operations";
       },
     },
   });
-const id: string = "program";
+const id: string = "string";
 
   const res = await sdk.step.delete(id);
 
@@ -131,7 +131,7 @@ import { ReadStepRequest } from "logicgate/dist/sdk/models/operations";
       },
     },
   });
-const id: string = "gadzooks";
+const id: string = "string";
 
   const res = await sdk.step.read(id);
 
@@ -177,7 +177,7 @@ import { ReadAllStepsRequest } from "logicgate/dist/sdk/models/operations";
   });
 const page: number = 853380;
 const size: number = 87498;
-const workflowId: string = "Reggae";
+const workflowId: string = "string";
 
   const res = await sdk.step.readAll(page, size, workflowId);
 
@@ -233,7 +233,7 @@ const stepApiUpdateIn: StepApiUpdateIn = {
   xpos: 20,
   ypos: 20,
 };
-const id: string = "Van";
+const id: string = "string";
 
   const res = await sdk.step.update(stepApiUpdateIn, id);
 

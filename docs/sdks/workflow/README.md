@@ -85,7 +85,7 @@ import { DeleteWorkflowRequest } from "logicgate/dist/sdk/models/operations";
       },
     },
   });
-const id: string = "program";
+const id: string = "string";
 
   const res = await sdk.workflow.delete(id);
 
@@ -129,7 +129,7 @@ import { ReadWorkflowRequest } from "logicgate/dist/sdk/models/operations";
       },
     },
   });
-const id: string = "gadzooks";
+const id: string = "string";
 
   const res = await sdk.workflow.read(id);
 
@@ -173,10 +173,10 @@ import { ReadAllWorkflowsRequest } from "logicgate/dist/sdk/models/operations";
       },
     },
   });
-const applicationId: string = "Van";
+const applicationId: string = "string";
 const includeJiraWorkflows: boolean = false;
-const page: number = 775284;
-const size: number = 45601;
+const page: number = 853380;
+const size: number = 87498;
 
   const res = await sdk.workflow.readAll(applicationId, includeJiraWorkflows, page, size);
 
@@ -230,7 +230,7 @@ const workflowApiUpdateIn: WorkflowApiUpdateIn = {
   xpos: 20,
   ypos: 20,
 };
-const id: string = "Van";
+const id: string = "string";
 
   const res = await sdk.workflow.update(workflowApiUpdateIn, id);
 

@@ -83,7 +83,7 @@ import { DeleteWorkflowMapRequest } from "logicgate/dist/sdk/models/operations";
       },
     },
   });
-const id: string = "program";
+const id: string = "string";
 
   const res = await sdk.workflowMap.delete(id);
 
@@ -127,7 +127,7 @@ import { ReadWorkflowMapRequest } from "logicgate/dist/sdk/models/operations";
       },
     },
   });
-const id: string = "gadzooks";
+const id: string = "string";
 
   const res = await sdk.workflowMap.read(id);
 
@@ -173,7 +173,7 @@ import { ReadAllWorkflowMapsRequest } from "logicgate/dist/sdk/models/operations
   });
 const page: number = 853380;
 const size: number = 87498;
-const workflowId: string = "Reggae";
+const workflowId: string = "string";
 
   const res = await sdk.workflowMap.readAll(page, size, workflowId);
 
@@ -223,7 +223,7 @@ import { WorkflowMapApiUpdateIn, WorkflowMapApiUpdateInRelationship } from "logi
 const workflowMapApiUpdateIn: WorkflowMapApiUpdateIn = {
   relationship: WorkflowMapApiUpdateInRelationship.ManyToMany,
 };
-const id: string = "New";
+const id: string = "string";
 
   const res = await sdk.workflowMap.update(workflowMapApiUpdateIn, id);
 
