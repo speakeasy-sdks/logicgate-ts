@@ -2,8 +2,8 @@ configVersion: 1.0.0
 management:
   docChecksum: ceadd3575123b52c9f910e72940b1793
   docVersion: v2023.10.0
-  speakeasyVersion: 1.104.0
-  generationVersion: 2.169.0
+  speakeasyVersion: 1.107.0
+  generationVersion: 2.171.0
 generation:
   comments:
     disableComments: false
@@ -15,7 +15,7 @@ generation:
   tagNamespacingDisabled: false
 features:
   typescript:
-    core: 2.93.0
+    core: 2.94.0
     examples: 2.81.3
     flattening: 2.81.1
     globalSecurity: 2.82.0
@@ -23,7 +23,7 @@ features:
     methodSecurity: 2.82.0
     nameOverrides: 2.81.1
 typescript:
-  version: 0.3.0
+  version: 0.4.0
   author: logicgate-dev
   clientServerStatusCodesAsErrors: true
   flattenGlobalSecurity: true
