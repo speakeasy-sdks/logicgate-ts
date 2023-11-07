@@ -8,7 +8,7 @@ import { Expose } from "class-transformer";
 /**
  * The type of the relationship between workflows
  */
-export enum WorkflowMapApiCreateInRelationship {
+export enum Relationship {
     OneToOne = "OneToOne",
     OneToMany = "OneToMany",
     ManyToOne = "ManyToOne",
@@ -31,7 +31,7 @@ export class WorkflowMapApiCreateIn extends SpeakeasyBase {
      */
     @SpeakeasyMetadata()
     @Expose({ name: "relationship" })
-    relationship: WorkflowMapApiCreateInRelationship;
+    relationship: Relationship;
 
     /**
      * The unique ID of the destination workflow of the workflow map relationship

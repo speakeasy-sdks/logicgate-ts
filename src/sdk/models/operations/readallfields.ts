@@ -3,13 +3,13 @@
  */
 
 import { SpeakeasyBase, SpeakeasyMetadata } from "../../../internal/utils";
-import * as shared from "../shared";
+import * as shared from "../../../sdk/models/shared";
 import { AxiosResponse } from "axios";
 
 /**
  * A field type where, if provided, the response will only contain fields of the identified field type
  */
-export enum ReadAllFieldsFieldTypeFieldTypeFilter {
+export enum FieldTypeFilter {
     Date = "DATE",
     User = "USER",
     ExternalUser = "EXTERNAL_USER",
@@ -37,7 +37,7 @@ export class ReadAllFieldsRequest extends SpeakeasyBase {
      * A field type where, if provided, the response will only contain fields of the identified field type
      */
     @SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=field-type" })
-    fieldType?: ReadAllFieldsFieldTypeFieldTypeFilter;
+    fieldType?: FieldTypeFilter;
 
     /**
      * The zero-indexed page number (must not be less than 0, defaults to 0)

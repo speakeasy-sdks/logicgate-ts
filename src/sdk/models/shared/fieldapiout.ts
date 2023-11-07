@@ -11,7 +11,7 @@ import { Expose, Type } from "class-transformer";
 /**
  * The type of the field
  */
-export enum FieldApiOutFieldType {
+export enum FieldType {
     Date = "DATE",
     User = "USER",
     ExternalUser = "EXTERNAL_USER",
@@ -32,7 +32,7 @@ export enum FieldApiOutFieldType {
 /**
  * The type of the field value
  */
-export enum FieldApiOutValueType {
+export enum ValueType {
     Number = "NUMBER",
     Calculation = "CALCULATION",
     Attachment = "ATTACHMENT",
@@ -125,14 +125,14 @@ export class FieldApiOut extends SpeakeasyBase {
      */
     @SpeakeasyMetadata()
     @Expose({ name: "type" })
-    type?: FieldApiOutFieldType;
+    type?: FieldType;
 
     /**
      * The type of the field value
      */
     @SpeakeasyMetadata()
     @Expose({ name: "valueType" })
-    valueType?: FieldApiOutValueType;
+    valueType?: ValueType;
 
     /**
      * The parent workflow of the step

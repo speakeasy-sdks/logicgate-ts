@@ -1,4 +1,4 @@
-# ApplicationApiCreateInIcon
+# Icon
 
 The icon type of the application (defaults to CUBES)
 

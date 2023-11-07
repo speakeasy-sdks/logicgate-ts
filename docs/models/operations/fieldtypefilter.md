@@ -1,6 +1,6 @@
-# FieldApiOutFieldType
+# FieldTypeFilter
 
-The type of the field
+A field type where, if provided, the response will only contain fields of the identified field type
 
 
 ## Values
@@ -21,4 +21,3 @@ The type of the field
 | `Attachment`      | ATTACHMENT        |
 | `Calculation`     | CALCULATION       |
 | `DateCalculation` | DATE_CALCULATION  |
-| `Other`           | OTHER             |

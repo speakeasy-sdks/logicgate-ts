@@ -8,7 +8,7 @@ import { Expose } from "class-transformer";
 /**
  * Indicates which users are allowed to be assigned this step on a record (defaults to APP_USERS)
  */
-export enum StepApiCreateInAssignableUserType {
+export enum AssignableUserType {
     AppAndExternalUsers = "APP_AND_EXTERNAL_USERS",
     AppUsers = "APP_USERS",
     ExternalUsers = "EXTERNAL_USERS",
@@ -23,7 +23,7 @@ export class StepApiCreateIn extends SpeakeasyBase {
      */
     @SpeakeasyMetadata()
     @Expose({ name: "assignableUserType" })
-    assignableUserType?: StepApiCreateInAssignableUserType;
+    assignableUserType?: AssignableUserType;
 
     /**
      * Whether comments are displayed on a step (defaults to false)

@@ -3,10 +3,10 @@
  */
 
 import * as utils from "../internal/utils";
+import * as shared from "../sdk/models/shared";
 import { Application } from "./application";
 import { Authentication } from "./authentication";
 import { Field } from "./field";
-import * as shared from "./models/shared";
 import { RecordT } from "./record";
 import { Step } from "./step";
 import { Workflow } from "./workflow";
@@ -55,9 +55,9 @@ export class SDKConfiguration {
     serverDefaults: any;
     language = "typescript";
     openapiDocVersion = "v2023.10.0";
-    sdkVersion = "0.4.0";
-    genVersion = "2.171.0";
-    userAgent = "speakeasy-sdk/typescript 0.4.0 2.171.0 v2023.10.0 logicgate";
+    sdkVersion = "0.5.0";
+    genVersion = "2.181.1";
+    userAgent = "speakeasy-sdk/typescript 0.5.0 2.181.1 v2023.10.0 logicgate";
     retryConfig?: utils.RetryConfig;
     public constructor(init?: Partial<SDKConfiguration>) {
         Object.assign(this, init);
@@ -78,13 +78,13 @@ export class SDKConfiguration {
  */
 export class Riskcloud {
     /**
-     * An [Application](https://help.logicgate.com/hc/en-us/articles/4402674055572-Create-a-new-Application) is a collection of Workflows, Steps, and logic that collectively solve a business use case
-     */
-    public application: Application;
-    /**
      * Getting Started: How to create an [API Access Token](https://www.logicgate.com/developer/risk-cloud-api-authentication/) to begin integrating with the Risk Cloud API
      */
     public authentication: Authentication;
+    /**
+     * An [Application](https://help.logicgate.com/hc/en-us/articles/4402674055572-Create-a-new-Application) is a collection of Workflows, Steps, and logic that collectively solve a business use case
+     */
+    public application: Application;
     /**
      * A [Field](https://help.logicgate.com/hc/en-us/articles/4402674064020-Create-Fields) is used to capture information from and display information to users in a Workflow
      */
@@ -98,13 +98,13 @@ export class Riskcloud {
      */
     public step: Step;
     /**
-     * A [Workflow](https://help.logicgate.com/hc/en-us/articles/4402683108756-Create-a-new-Workflow) is a combination of Steps, Paths, Fields, and routing logic that combine to form a system in an Application
-     */
-    public workflow: Workflow;
-    /**
      * A [Workflow Map](https://help.logicgate.com/hc/en-us/articles/4402683117588) represents a relationship between two Workflows
      */
     public workflowMap: WorkflowMap;
+    /**
+     * A [Workflow](https://help.logicgate.com/hc/en-us/articles/4402683108756-Create-a-new-Workflow) is a combination of Steps, Paths, Fields, and routing logic that combine to form a system in an Application
+     */
+    public workflow: Workflow;
 
     private sdkConfiguration: SDKConfiguration;
 
@@ -124,12 +124,12 @@ export class Riskcloud {
             retryConfig: props?.retryConfig,
         });
 
-        this.application = new Application(this.sdkConfiguration);
         this.authentication = new Authentication(this.sdkConfiguration);
+        this.application = new Application(this.sdkConfiguration);
         this.field = new Field(this.sdkConfiguration);
         this.record = new RecordT(this.sdkConfiguration);
         this.step = new Step(this.sdkConfiguration);
-        this.workflow = new Workflow(this.sdkConfiguration);
         this.workflowMap = new WorkflowMap(this.sdkConfiguration);
+        this.workflow = new Workflow(this.sdkConfiguration);
     }
 }

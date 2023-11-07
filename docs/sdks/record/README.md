@@ -1,5 +1,5 @@
 # RecordT
-(*record*)
+(*.record*)
 
 ## Overview
 
@@ -31,6 +31,7 @@ import { Riskcloud } from "logicgate";
   });
 
   const res = await sdk.record.readAll({});
+
 
   if (res.statusCode == 200) {
     // handle response

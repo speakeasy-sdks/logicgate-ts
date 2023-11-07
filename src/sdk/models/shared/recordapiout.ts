@@ -14,7 +14,7 @@ import { Expose, Type } from "class-transformer";
 /**
  * The status of the record
  */
-export enum RecordApiOutStatus {
+export enum Status {
     Inactive = "INACTIVE",
     NotAssigned = "NOT_ASSIGNED",
     Assigned = "ASSIGNED",
@@ -122,7 +122,7 @@ export class RecordApiOut extends SpeakeasyBase {
      */
     @SpeakeasyMetadata()
     @Expose({ name: "status" })
-    status?: RecordApiOutStatus;
+    status?: Status;
 
     /**
      * The parent workflow of the step

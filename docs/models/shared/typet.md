@@ -1,4 +1,4 @@
-# ApplicationApiCreateInType
+# TypeT
 
 The type of Risk Cloud application (defaults to NONE)
 

@@ -8,7 +8,7 @@ import { Expose } from "class-transformer";
 /**
  * The icon type of the application (defaults to CUBES)
  */
-export enum ApplicationApiCreateInIcon {
+export enum Icon {
     Bookmark = "BOOKMARK",
     Bolt = "BOLT",
     Bullhorn = "BULLHORN",
@@ -39,7 +39,7 @@ export enum ApplicationApiCreateInIcon {
 /**
  * The type of Risk Cloud application (defaults to NONE)
  */
-export enum ApplicationApiCreateInType {
+export enum TypeT {
     AccessManagement = "ACCESS_MANAGEMENT",
     AmlKyc = "AML_KYC",
     AssetManagement = "ASSET_MANAGEMENT",
@@ -91,7 +91,7 @@ export class ApplicationApiCreateIn extends SpeakeasyBase {
      */
     @SpeakeasyMetadata()
     @Expose({ name: "icon" })
-    icon?: ApplicationApiCreateInIcon;
+    icon?: Icon;
 
     /**
      * The name of the application
@@ -105,5 +105,5 @@ export class ApplicationApiCreateIn extends SpeakeasyBase {
      */
     @SpeakeasyMetadata()
     @Expose({ name: "type" })
-    type?: ApplicationApiCreateInType;
+    type?: TypeT;
 }

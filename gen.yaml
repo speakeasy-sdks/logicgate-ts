@@ -2,20 +2,15 @@ configVersion: 1.0.0
 management:
   docChecksum: ceadd3575123b52c9f910e72940b1793
   docVersion: v2023.10.0
-  speakeasyVersion: 1.107.0
-  generationVersion: 2.171.0
+  speakeasyVersion: 1.114.1
+  generationVersion: 2.181.1
 generation:
-  comments:
-    disableComments: false
-    omitDescriptionIfSummaryPresent: false
-  baseServerURL: ""
-  repoURL: https://github.com/speakeasy-sdks/logicgate-ts.git
+  comments: {}
   sdkClassName: riskcloud
-  singleTagPerOp: false
-  tagNamespacingDisabled: false
+  repoURL: https://github.com/speakeasy-sdks/logicgate-ts.git
 features:
   typescript:
-    core: 2.94.0
+    core: 3.1.0
     examples: 2.81.3
     flattening: 2.81.1
     globalSecurity: 2.82.0
@@ -23,10 +18,18 @@ features:
     methodSecurity: 2.82.0
     nameOverrides: 2.81.1
 typescript:
-  version: 0.4.0
+  version: 0.5.0
   author: logicgate-dev
   clientServerStatusCodesAsErrors: true
   flattenGlobalSecurity: true
+  imports:
+    option: openapi
+    paths:
+      callbacks: sdk/models/callbacks
+      errors: sdk/models/errors
+      operations: sdk/models/operations
+      shared: sdk/models/shared
+      webhooks: sdk/models/webhooks
   installationURL: https://github.com/speakeasy-sdks/logicgate-ts
   maxMethodParams: 4
   packageName: logicgate

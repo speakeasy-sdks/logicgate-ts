@@ -1,5 +1,5 @@
 # Authentication
-(*authentication*)
+(*.authentication*)
 
 ## Overview
 
@@ -29,6 +29,7 @@ const operationSecurity: GetApiTokenSecurity = {
 };
 
   const res = await sdk.authentication.getApiToken(operationSecurity);
+
 
   if (res.statusCode == 200) {
     // handle response

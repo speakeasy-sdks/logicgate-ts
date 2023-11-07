@@ -1,4 +1,4 @@
-# WorkflowMapApiCreateInRelationship
+# Relationship
 
 The type of the relationship between workflows
 

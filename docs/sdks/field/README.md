@@ -1,5 +1,5 @@
 # Field
-(*field*)
+(*.field*)
 
 ## Overview
 
@@ -19,7 +19,7 @@ Retrieve a page of all fields whose parent application the current user has [Bui
 
 ```typescript
 import { Riskcloud } from "logicgate";
-import { ReadAllFieldsFieldTypeFieldTypeFilter } from "logicgate/dist/sdk/models/operations";
+import { FieldTypeFilter } from "logicgate/dist/sdk/models/operations";
 
 (async() => {
   const sdk = new Riskcloud({
@@ -32,6 +32,7 @@ import { ReadAllFieldsFieldTypeFieldTypeFilter } from "logicgate/dist/sdk/models
   });
 
   const res = await sdk.field.readAll({});
+
 
   if (res.statusCode == 200) {
     // handle response

@@ -1,4 +1,4 @@
-# RecordApiOutStatus
+# Status
 
 The status of the record
 

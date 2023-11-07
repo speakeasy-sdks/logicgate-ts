@@ -1,5 +1,5 @@
 # Step
-(*step*)
+(*.step*)
 
 ## Overview
 
@@ -24,7 +24,7 @@ Create a step from a JSON request body.
 ```typescript
 import { Riskcloud } from "logicgate";
 import { CreateStepRequest } from "logicgate/dist/sdk/models/operations";
-import { StepApiCreateIn, StepApiCreateInAssignableUserType } from "logicgate/dist/sdk/models/shared";
+import { AssignableUserType, StepApiCreateIn } from "logicgate/dist/sdk/models/shared";
 
 (async() => {
   const sdk = new Riskcloud({
@@ -36,7 +36,7 @@ import { StepApiCreateIn, StepApiCreateInAssignableUserType } from "logicgate/di
     },
   });
 const stepApiCreateIn: StepApiCreateIn = {
-  assignableUserType: StepApiCreateInAssignableUserType.AppUsers,
+  assignableUserType: AssignableUserType.AppUsers,
   enableComments: false,
   externalUserMfaRequired: false,
   name: "Identify Risk",
@@ -46,6 +46,7 @@ const stepApiCreateIn: StepApiCreateIn = {
 };
 
   const res = await sdk.step.create(stepApiCreateIn);
+
 
   if (res.statusCode == 200) {
     // handle response
@@ -91,6 +92,7 @@ const id: string = "string";
 
   const res = await sdk.step.delete(id);
 
+
   if (res.statusCode == 200) {
     // handle response
   }
@@ -134,6 +136,7 @@ import { ReadStepRequest } from "logicgate/dist/sdk/models/operations";
 const id: string = "string";
 
   const res = await sdk.step.read(id);
+
 
   if (res.statusCode == 200) {
     // handle response
@@ -180,6 +183,7 @@ const size: number = 87498;
 const workflowId: string = "string";
 
   const res = await sdk.step.readAll(page, size, workflowId);
+
 
   if (res.statusCode == 200) {
     // handle response
@@ -236,6 +240,7 @@ const stepApiUpdateIn: StepApiUpdateIn = {
 const id: string = "string";
 
   const res = await sdk.step.update(stepApiUpdateIn, id);
+
 
   if (res.statusCode == 200) {
     // handle response

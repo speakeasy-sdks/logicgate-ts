@@ -1,5 +1,5 @@
 # WorkflowMap
-(*workflowMap*)
+(*.workflowMap*)
 
 ## Overview
 
@@ -24,7 +24,7 @@ Create a workflow map from a JSON request body.
 ```typescript
 import { Riskcloud } from "logicgate";
 import { CreateWorkflowMapRequest } from "logicgate/dist/sdk/models/operations";
-import { WorkflowMapApiCreateIn, WorkflowMapApiCreateInRelationship } from "logicgate/dist/sdk/models/shared";
+import { Relationship, WorkflowMapApiCreateIn } from "logicgate/dist/sdk/models/shared";
 
 (async() => {
   const sdk = new Riskcloud({
@@ -37,11 +37,12 @@ import { WorkflowMapApiCreateIn, WorkflowMapApiCreateInRelationship } from "logi
   });
 const workflowMapApiCreateIn: WorkflowMapApiCreateIn = {
   from: "a1b2c3d4",
-  relationship: WorkflowMapApiCreateInRelationship.OneToMany,
+  relationship: Relationship.OneToMany,
   to: "a1b2c3d4",
 };
 
   const res = await sdk.workflowMap.create(workflowMapApiCreateIn);
+
 
   if (res.statusCode == 200) {
     // handle response
@@ -87,6 +88,7 @@ const id: string = "string";
 
   const res = await sdk.workflowMap.delete(id);
 
+
   if (res.statusCode == 200) {
     // handle response
   }
@@ -130,6 +132,7 @@ import { ReadWorkflowMapRequest } from "logicgate/dist/sdk/models/operations";
 const id: string = "string";
 
   const res = await sdk.workflowMap.read(id);
+
 
   if (res.statusCode == 200) {
     // handle response
@@ -176,6 +179,7 @@ const size: number = 87498;
 const workflowId: string = "string";
 
   const res = await sdk.workflowMap.readAll(page, size, workflowId);
+
 
   if (res.statusCode == 200) {
     // handle response
@@ -226,6 +230,7 @@ const workflowMapApiUpdateIn: WorkflowMapApiUpdateIn = {
 const id: string = "string";
 
   const res = await sdk.workflowMap.update(workflowMapApiUpdateIn, id);
+
 
   if (res.statusCode == 200) {
     // handle response

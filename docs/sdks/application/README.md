@@ -1,5 +1,5 @@
 # Application
-(*application*)
+(*.application*)
 
 ## Overview
 
@@ -24,7 +24,7 @@ Create an application from a JSON request body.
 ```typescript
 import { Riskcloud } from "logicgate";
 import { CreateApplicationRequest } from "logicgate/dist/sdk/models/operations";
-import { ApplicationApiCreateIn, ApplicationApiCreateInIcon, ApplicationApiCreateInType } from "logicgate/dist/sdk/models/shared";
+import { ApplicationApiCreateIn, Icon, TypeT } from "logicgate/dist/sdk/models/shared";
 
 (async() => {
   const sdk = new Riskcloud({
@@ -37,12 +37,13 @@ import { ApplicationApiCreateIn, ApplicationApiCreateInIcon, ApplicationApiCreat
   });
 const applicationApiCreateIn: ApplicationApiCreateIn = {
   color: "#00a3de",
-  icon: ApplicationApiCreateInIcon.Cubes,
+  icon: Icon.Cubes,
   name: "Cyber Risk Management Application",
-  type: ApplicationApiCreateInType.ControlsCompliance,
+  type: TypeT.ControlsCompliance,
 };
 
   const res = await sdk.application.create(applicationApiCreateIn);
+
 
   if (res.statusCode == 200) {
     // handle response
@@ -88,6 +89,7 @@ const id: string = "string";
 
   const res = await sdk.application.delete(id);
 
+
   if (res.statusCode == 200) {
     // handle response
   }
@@ -131,6 +133,7 @@ import { ReadApplicationRequest } from "logicgate/dist/sdk/models/operations";
 const id: string = "string";
 
   const res = await sdk.application.read(id);
+
 
   if (res.statusCode == 200) {
     // handle response
@@ -176,6 +179,7 @@ const page: number = 853380;
 const size: number = 87498;
 
   const res = await sdk.application.readAll(page, size);
+
 
   if (res.statusCode == 200) {
     // handle response
@@ -230,6 +234,7 @@ const applicationApiUpdateIn: ApplicationApiUpdateIn = {
 const id: string = "string";
 
   const res = await sdk.application.update(applicationApiUpdateIn, id);
+
 
   if (res.statusCode == 200) {
     // handle response
