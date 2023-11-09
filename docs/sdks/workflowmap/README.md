@@ -1,5 +1,5 @@
 # WorkflowMap
-(*.workflowMap*)
+(*workflowMap*)
 
 ## Overview
 
@@ -43,7 +43,6 @@ const workflowMapApiCreateIn: WorkflowMapApiCreateIn = {
 
   const res = await sdk.workflowMap.create(workflowMapApiCreateIn);
 
-
   if (res.statusCode == 200) {
     // handle response
   }
@@ -52,16 +51,20 @@ const workflowMapApiCreateIn: WorkflowMapApiCreateIn = {
 
 ### Parameters
 
-| Parameter                                                                      | Type                                                                           | Required                                                                       | Description                                                                    |
-| ------------------------------------------------------------------------------ | ------------------------------------------------------------------------------ | ------------------------------------------------------------------------------ | ------------------------------------------------------------------------------ |
-| `workflowMapApiCreateIn`                                                       | [shared.WorkflowMapApiCreateIn](../../models/shared/workflowmapapicreatein.md) | :heavy_check_mark:                                                             | N/A                                                                            |
-| `config`                                                                       | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                   | :heavy_minus_sign:                                                             | Available config options for making requests.                                  |
+| Parameter                                                                             | Type                                                                                  | Required                                                                              | Description                                                                           |
+| ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- |
+| `workflowMapApiCreateIn`                                                              | [shared.WorkflowMapApiCreateIn](../../../sdk/models/shared/workflowmapapicreatein.md) | :heavy_check_mark:                                                                    | N/A                                                                                   |
+| `config`                                                                              | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                          | :heavy_minus_sign:                                                                    | Available config options for making requests.                                         |
 
 
 ### Response
 
-**Promise<[operations.CreateWorkflowMapResponse](../../models/operations/createworkflowmapresponse.md)>**
+**Promise<[operations.CreateWorkflowMapResponse](../../sdk/models/operations/createworkflowmapresponse.md)>**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## delete
 
@@ -88,7 +91,6 @@ const id: string = "string";
 
   const res = await sdk.workflowMap.delete(id);
 
-
   if (res.statusCode == 200) {
     // handle response
   }
@@ -105,8 +107,12 @@ const id: string = "string";
 
 ### Response
 
-**Promise<[operations.DeleteWorkflowMapResponse](../../models/operations/deleteworkflowmapresponse.md)>**
+**Promise<[operations.DeleteWorkflowMapResponse](../../sdk/models/operations/deleteworkflowmapresponse.md)>**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## read
 
@@ -133,7 +139,6 @@ const id: string = "string";
 
   const res = await sdk.workflowMap.read(id);
 
-
   if (res.statusCode == 200) {
     // handle response
   }
@@ -150,8 +155,12 @@ const id: string = "string";
 
 ### Response
 
-**Promise<[operations.ReadWorkflowMapResponse](../../models/operations/readworkflowmapresponse.md)>**
+**Promise<[operations.ReadWorkflowMapResponse](../../sdk/models/operations/readworkflowmapresponse.md)>**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## readAll
 
@@ -180,7 +189,6 @@ const workflowId: string = "string";
 
   const res = await sdk.workflowMap.readAll(page, size, workflowId);
 
-
   if (res.statusCode == 200) {
     // handle response
   }
@@ -199,8 +207,12 @@ const workflowId: string = "string";
 
 ### Response
 
-**Promise<[operations.ReadAllWorkflowMapsResponse](../../models/operations/readallworkflowmapsresponse.md)>**
+**Promise<[operations.ReadAllWorkflowMapsResponse](../../sdk/models/operations/readallworkflowmapsresponse.md)>**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## update
 
@@ -231,7 +243,6 @@ const id: string = "string";
 
   const res = await sdk.workflowMap.update(workflowMapApiUpdateIn, id);
 
-
   if (res.statusCode == 200) {
     // handle response
   }
@@ -240,14 +251,18 @@ const id: string = "string";
 
 ### Parameters
 
-| Parameter                                                                      | Type                                                                           | Required                                                                       | Description                                                                    |
-| ------------------------------------------------------------------------------ | ------------------------------------------------------------------------------ | ------------------------------------------------------------------------------ | ------------------------------------------------------------------------------ |
-| `workflowMapApiUpdateIn`                                                       | [shared.WorkflowMapApiUpdateIn](../../models/shared/workflowmapapiupdatein.md) | :heavy_check_mark:                                                             | N/A                                                                            |
-| `id`                                                                           | *string*                                                                       | :heavy_check_mark:                                                             | The unique ID of the workflow map                                              |
-| `config`                                                                       | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                   | :heavy_minus_sign:                                                             | Available config options for making requests.                                  |
+| Parameter                                                                             | Type                                                                                  | Required                                                                              | Description                                                                           |
+| ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- |
+| `workflowMapApiUpdateIn`                                                              | [shared.WorkflowMapApiUpdateIn](../../../sdk/models/shared/workflowmapapiupdatein.md) | :heavy_check_mark:                                                                    | N/A                                                                                   |
+| `id`                                                                                  | *string*                                                                              | :heavy_check_mark:                                                                    | The unique ID of the workflow map                                                     |
+| `config`                                                                              | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                          | :heavy_minus_sign:                                                                    | Available config options for making requests.                                         |
 
 
 ### Response
 
-**Promise<[operations.UpdateWorkflowMapResponse](../../models/operations/updateworkflowmapresponse.md)>**
+**Promise<[operations.UpdateWorkflowMapResponse](../../sdk/models/operations/updateworkflowmapresponse.md)>**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |

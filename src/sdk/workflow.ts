@@ -39,7 +39,7 @@ export class Workflow {
             this.sdkConfiguration.serverURL,
             this.sdkConfiguration.serverDefaults
         );
-        const url: string = baseURL.replace(/\/$/, "") + "/api/v2/workflows";
+        const operationUrl: string = baseURL.replace(/\/$/, "") + "/api/v2/workflows";
 
         let [reqBodyHeaders, reqBody]: [object, any] = [{}, null];
 
@@ -76,7 +76,7 @@ export class Workflow {
 
         const httpRes: AxiosResponse = await client.request({
             validateStatus: () => true,
-            url: url,
+            url: operationUrl,
             method: "post",
             headers: headers,
             responseType: "arraybuffer",
@@ -144,7 +144,7 @@ export class Workflow {
             this.sdkConfiguration.serverURL,
             this.sdkConfiguration.serverDefaults
         );
-        const url: string = utils.generateURL(baseURL, "/api/v2/workflows/{id}", req);
+        const operationUrl: string = utils.generateURL(baseURL, "/api/v2/workflows/{id}", req);
         const client: AxiosInstance = this.sdkConfiguration.defaultClient;
         let globalSecurity = this.sdkConfiguration.security;
         if (typeof globalSecurity === "function") {
@@ -165,7 +165,7 @@ export class Workflow {
 
         const httpRes: AxiosResponse = await client.request({
             validateStatus: () => true,
-            url: url,
+            url: operationUrl,
             method: "delete",
             headers: headers,
             responseType: "arraybuffer",
@@ -229,7 +229,7 @@ export class Workflow {
             this.sdkConfiguration.serverURL,
             this.sdkConfiguration.serverDefaults
         );
-        const url: string = utils.generateURL(baseURL, "/api/v2/workflows/{id}", req);
+        const operationUrl: string = utils.generateURL(baseURL, "/api/v2/workflows/{id}", req);
         const client: AxiosInstance = this.sdkConfiguration.defaultClient;
         let globalSecurity = this.sdkConfiguration.security;
         if (typeof globalSecurity === "function") {
@@ -250,7 +250,7 @@ export class Workflow {
 
         const httpRes: AxiosResponse = await client.request({
             validateStatus: () => true,
-            url: url,
+            url: operationUrl,
             method: "get",
             headers: headers,
             responseType: "arraybuffer",
@@ -323,7 +323,7 @@ export class Workflow {
             this.sdkConfiguration.serverURL,
             this.sdkConfiguration.serverDefaults
         );
-        const url: string = baseURL.replace(/\/$/, "") + "/api/v2/workflows";
+        const operationUrl: string = baseURL.replace(/\/$/, "") + "/api/v2/workflows";
         const client: AxiosInstance = this.sdkConfiguration.defaultClient;
         let globalSecurity = this.sdkConfiguration.security;
         if (typeof globalSecurity === "function") {
@@ -345,7 +345,7 @@ export class Workflow {
 
         const httpRes: AxiosResponse = await client.request({
             validateStatus: () => true,
-            url: url + queryParams,
+            url: operationUrl + queryParams,
             method: "get",
             headers: headers,
             responseType: "arraybuffer",
@@ -414,7 +414,7 @@ export class Workflow {
             this.sdkConfiguration.serverURL,
             this.sdkConfiguration.serverDefaults
         );
-        const url: string = utils.generateURL(baseURL, "/api/v2/workflows/{id}", req);
+        const operationUrl: string = utils.generateURL(baseURL, "/api/v2/workflows/{id}", req);
 
         let [reqBodyHeaders, reqBody]: [object, any] = [{}, null];
 
@@ -451,7 +451,7 @@ export class Workflow {
 
         const httpRes: AxiosResponse = await client.request({
             validateStatus: () => true,
-            url: url,
+            url: operationUrl,
             method: "patch",
             headers: headers,
             responseType: "arraybuffer",

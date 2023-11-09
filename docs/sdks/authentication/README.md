@@ -1,5 +1,5 @@
 # Authentication
-(*.authentication*)
+(*authentication*)
 
 ## Overview
 
@@ -30,7 +30,6 @@ const operationSecurity: GetApiTokenSecurity = {
 
   const res = await sdk.authentication.getApiToken(operationSecurity);
 
-
   if (res.statusCode == 200) {
     // handle response
   }
@@ -39,13 +38,17 @@ const operationSecurity: GetApiTokenSecurity = {
 
 ### Parameters
 
-| Parameter                                                                        | Type                                                                             | Required                                                                         | Description                                                                      |
-| -------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- |
-| `security`                                                                       | [operations.GetApiTokenSecurity](../../models/operations/getapitokensecurity.md) | :heavy_check_mark:                                                               | The security requirements to use for the request.                                |
-| `config`                                                                         | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                     | :heavy_minus_sign:                                                               | Available config options for making requests.                                    |
+| Parameter                                                                            | Type                                                                                 | Required                                                                             | Description                                                                          |
+| ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ |
+| `security`                                                                           | [operations.GetApiTokenSecurity](../../sdk/models/operations/getapitokensecurity.md) | :heavy_check_mark:                                                                   | The security requirements to use for the request.                                    |
+| `config`                                                                             | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                         | :heavy_minus_sign:                                                                   | Available config options for making requests.                                        |
 
 
 ### Response
 
-**Promise<[operations.GetApiTokenResponse](../../models/operations/getapitokenresponse.md)>**
+**Promise<[operations.GetApiTokenResponse](../../sdk/models/operations/getapitokenresponse.md)>**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |

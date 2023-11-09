@@ -39,7 +39,7 @@ export class WorkflowMap {
             this.sdkConfiguration.serverURL,
             this.sdkConfiguration.serverDefaults
         );
-        const url: string = baseURL.replace(/\/$/, "") + "/api/v2/workflow-maps";
+        const operationUrl: string = baseURL.replace(/\/$/, "") + "/api/v2/workflow-maps";
 
         let [reqBodyHeaders, reqBody]: [object, any] = [{}, null];
 
@@ -76,7 +76,7 @@ export class WorkflowMap {
 
         const httpRes: AxiosResponse = await client.request({
             validateStatus: () => true,
-            url: url,
+            url: operationUrl,
             method: "post",
             headers: headers,
             responseType: "arraybuffer",
@@ -144,7 +144,7 @@ export class WorkflowMap {
             this.sdkConfiguration.serverURL,
             this.sdkConfiguration.serverDefaults
         );
-        const url: string = utils.generateURL(baseURL, "/api/v2/workflow-maps/{id}", req);
+        const operationUrl: string = utils.generateURL(baseURL, "/api/v2/workflow-maps/{id}", req);
         const client: AxiosInstance = this.sdkConfiguration.defaultClient;
         let globalSecurity = this.sdkConfiguration.security;
         if (typeof globalSecurity === "function") {
@@ -165,7 +165,7 @@ export class WorkflowMap {
 
         const httpRes: AxiosResponse = await client.request({
             validateStatus: () => true,
-            url: url,
+            url: operationUrl,
             method: "delete",
             headers: headers,
             responseType: "arraybuffer",
@@ -232,7 +232,7 @@ export class WorkflowMap {
             this.sdkConfiguration.serverURL,
             this.sdkConfiguration.serverDefaults
         );
-        const url: string = utils.generateURL(baseURL, "/api/v2/workflow-maps/{id}", req);
+        const operationUrl: string = utils.generateURL(baseURL, "/api/v2/workflow-maps/{id}", req);
         const client: AxiosInstance = this.sdkConfiguration.defaultClient;
         let globalSecurity = this.sdkConfiguration.security;
         if (typeof globalSecurity === "function") {
@@ -253,7 +253,7 @@ export class WorkflowMap {
 
         const httpRes: AxiosResponse = await client.request({
             validateStatus: () => true,
-            url: url,
+            url: operationUrl,
             method: "get",
             headers: headers,
             responseType: "arraybuffer",
@@ -324,7 +324,7 @@ export class WorkflowMap {
             this.sdkConfiguration.serverURL,
             this.sdkConfiguration.serverDefaults
         );
-        const url: string = baseURL.replace(/\/$/, "") + "/api/v2/workflow-maps";
+        const operationUrl: string = baseURL.replace(/\/$/, "") + "/api/v2/workflow-maps";
         const client: AxiosInstance = this.sdkConfiguration.defaultClient;
         let globalSecurity = this.sdkConfiguration.security;
         if (typeof globalSecurity === "function") {
@@ -346,7 +346,7 @@ export class WorkflowMap {
 
         const httpRes: AxiosResponse = await client.request({
             validateStatus: () => true,
-            url: url + queryParams,
+            url: operationUrl + queryParams,
             method: "get",
             headers: headers,
             responseType: "arraybuffer",
@@ -416,7 +416,7 @@ export class WorkflowMap {
             this.sdkConfiguration.serverURL,
             this.sdkConfiguration.serverDefaults
         );
-        const url: string = utils.generateURL(baseURL, "/api/v2/workflow-maps/{id}", req);
+        const operationUrl: string = utils.generateURL(baseURL, "/api/v2/workflow-maps/{id}", req);
 
         let [reqBodyHeaders, reqBody]: [object, any] = [{}, null];
 
@@ -453,7 +453,7 @@ export class WorkflowMap {
 
         const httpRes: AxiosResponse = await client.request({
             validateStatus: () => true,
-            url: url,
+            url: operationUrl,
             method: "patch",
             headers: headers,
             responseType: "arraybuffer",

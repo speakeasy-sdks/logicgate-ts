@@ -1,5 +1,5 @@
 # RecordT
-(*.record*)
+(*record*)
 
 ## Overview
 
@@ -32,7 +32,6 @@ import { Riskcloud } from "logicgate";
 
   const res = await sdk.record.readAll({});
 
-
   if (res.statusCode == 200) {
     // handle response
   }
@@ -41,13 +40,17 @@ import { Riskcloud } from "logicgate";
 
 ### Parameters
 
-| Parameter                                                                            | Type                                                                                 | Required                                                                             | Description                                                                          |
-| ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ |
-| `request`                                                                            | [operations.ReadAllRecordsRequest](../../models/operations/readallrecordsrequest.md) | :heavy_check_mark:                                                                   | The request object to use for the request.                                           |
-| `config`                                                                             | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                         | :heavy_minus_sign:                                                                   | Available config options for making requests.                                        |
+| Parameter                                                                                | Type                                                                                     | Required                                                                                 | Description                                                                              |
+| ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- |
+| `request`                                                                                | [operations.ReadAllRecordsRequest](../../sdk/models/operations/readallrecordsrequest.md) | :heavy_check_mark:                                                                       | The request object to use for the request.                                               |
+| `config`                                                                                 | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                             | :heavy_minus_sign:                                                                       | Available config options for making requests.                                            |
 
 
 ### Response
 
-**Promise<[operations.ReadAllRecordsResponse](../../models/operations/readallrecordsresponse.md)>**
+**Promise<[operations.ReadAllRecordsResponse](../../sdk/models/operations/readallrecordsresponse.md)>**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |

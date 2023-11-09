@@ -1,5 +1,5 @@
 # Workflow
-(*.workflow*)
+(*workflow*)
 
 ## Overview
 
@@ -45,7 +45,6 @@ const workflowApiCreateIn: WorkflowApiCreateIn = {
 
   const res = await sdk.workflow.create(workflowApiCreateIn);
 
-
   if (res.statusCode == 200) {
     // handle response
   }
@@ -54,16 +53,20 @@ const workflowApiCreateIn: WorkflowApiCreateIn = {
 
 ### Parameters
 
-| Parameter                                                                | Type                                                                     | Required                                                                 | Description                                                              |
-| ------------------------------------------------------------------------ | ------------------------------------------------------------------------ | ------------------------------------------------------------------------ | ------------------------------------------------------------------------ |
-| `workflowApiCreateIn`                                                    | [shared.WorkflowApiCreateIn](../../models/shared/workflowapicreatein.md) | :heavy_check_mark:                                                       | N/A                                                                      |
-| `config`                                                                 | [AxiosRequestConfig](https://axios-http.com/docs/req_config)             | :heavy_minus_sign:                                                       | Available config options for making requests.                            |
+| Parameter                                                                       | Type                                                                            | Required                                                                        | Description                                                                     |
+| ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- |
+| `workflowApiCreateIn`                                                           | [shared.WorkflowApiCreateIn](../../../sdk/models/shared/workflowapicreatein.md) | :heavy_check_mark:                                                              | N/A                                                                             |
+| `config`                                                                        | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                    | :heavy_minus_sign:                                                              | Available config options for making requests.                                   |
 
 
 ### Response
 
-**Promise<[operations.CreateWorkflowResponse](../../models/operations/createworkflowresponse.md)>**
+**Promise<[operations.CreateWorkflowResponse](../../sdk/models/operations/createworkflowresponse.md)>**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## delete
 
@@ -90,7 +93,6 @@ const id: string = "string";
 
   const res = await sdk.workflow.delete(id);
 
-
   if (res.statusCode == 200) {
     // handle response
   }
@@ -107,8 +109,12 @@ const id: string = "string";
 
 ### Response
 
-**Promise<[operations.DeleteWorkflowResponse](../../models/operations/deleteworkflowresponse.md)>**
+**Promise<[operations.DeleteWorkflowResponse](../../sdk/models/operations/deleteworkflowresponse.md)>**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## read
 
@@ -135,7 +141,6 @@ const id: string = "string";
 
   const res = await sdk.workflow.read(id);
 
-
   if (res.statusCode == 200) {
     // handle response
   }
@@ -152,8 +157,12 @@ const id: string = "string";
 
 ### Response
 
-**Promise<[operations.ReadWorkflowResponse](../../models/operations/readworkflowresponse.md)>**
+**Promise<[operations.ReadWorkflowResponse](../../sdk/models/operations/readworkflowresponse.md)>**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## readAll
 
@@ -183,7 +192,6 @@ const size: number = 87498;
 
   const res = await sdk.workflow.readAll(applicationId, includeJiraWorkflows, page, size);
 
-
   if (res.statusCode == 200) {
     // handle response
   }
@@ -203,8 +211,12 @@ const size: number = 87498;
 
 ### Response
 
-**Promise<[operations.ReadAllWorkflowsResponse](../../models/operations/readallworkflowsresponse.md)>**
+**Promise<[operations.ReadAllWorkflowsResponse](../../sdk/models/operations/readallworkflowsresponse.md)>**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## update
 
@@ -238,7 +250,6 @@ const id: string = "string";
 
   const res = await sdk.workflow.update(workflowApiUpdateIn, id);
 
-
   if (res.statusCode == 200) {
     // handle response
   }
@@ -247,14 +258,18 @@ const id: string = "string";
 
 ### Parameters
 
-| Parameter                                                                | Type                                                                     | Required                                                                 | Description                                                              |
-| ------------------------------------------------------------------------ | ------------------------------------------------------------------------ | ------------------------------------------------------------------------ | ------------------------------------------------------------------------ |
-| `workflowApiUpdateIn`                                                    | [shared.WorkflowApiUpdateIn](../../models/shared/workflowapiupdatein.md) | :heavy_check_mark:                                                       | N/A                                                                      |
-| `id`                                                                     | *string*                                                                 | :heavy_check_mark:                                                       | The unique ID of the workflow                                            |
-| `config`                                                                 | [AxiosRequestConfig](https://axios-http.com/docs/req_config)             | :heavy_minus_sign:                                                       | Available config options for making requests.                            |
+| Parameter                                                                       | Type                                                                            | Required                                                                        | Description                                                                     |
+| ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- |
+| `workflowApiUpdateIn`                                                           | [shared.WorkflowApiUpdateIn](../../../sdk/models/shared/workflowapiupdatein.md) | :heavy_check_mark:                                                              | N/A                                                                             |
+| `id`                                                                            | *string*                                                                        | :heavy_check_mark:                                                              | The unique ID of the workflow                                                   |
+| `config`                                                                        | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                    | :heavy_minus_sign:                                                              | Available config options for making requests.                                   |
 
 
 ### Response
 
-**Promise<[operations.UpdateWorkflowResponse](../../models/operations/updateworkflowresponse.md)>**
+**Promise<[operations.UpdateWorkflowResponse](../../sdk/models/operations/updateworkflowresponse.md)>**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |

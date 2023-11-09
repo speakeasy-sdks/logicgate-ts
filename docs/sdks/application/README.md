@@ -1,5 +1,5 @@
 # Application
-(*.application*)
+(*application*)
 
 ## Overview
 
@@ -44,7 +44,6 @@ const applicationApiCreateIn: ApplicationApiCreateIn = {
 
   const res = await sdk.application.create(applicationApiCreateIn);
 
-
   if (res.statusCode == 200) {
     // handle response
   }
@@ -53,16 +52,20 @@ const applicationApiCreateIn: ApplicationApiCreateIn = {
 
 ### Parameters
 
-| Parameter                                                                      | Type                                                                           | Required                                                                       | Description                                                                    |
-| ------------------------------------------------------------------------------ | ------------------------------------------------------------------------------ | ------------------------------------------------------------------------------ | ------------------------------------------------------------------------------ |
-| `applicationApiCreateIn`                                                       | [shared.ApplicationApiCreateIn](../../models/shared/applicationapicreatein.md) | :heavy_check_mark:                                                             | N/A                                                                            |
-| `config`                                                                       | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                   | :heavy_minus_sign:                                                             | Available config options for making requests.                                  |
+| Parameter                                                                             | Type                                                                                  | Required                                                                              | Description                                                                           |
+| ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- |
+| `applicationApiCreateIn`                                                              | [shared.ApplicationApiCreateIn](../../../sdk/models/shared/applicationapicreatein.md) | :heavy_check_mark:                                                                    | N/A                                                                                   |
+| `config`                                                                              | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                          | :heavy_minus_sign:                                                                    | Available config options for making requests.                                         |
 
 
 ### Response
 
-**Promise<[operations.CreateApplicationResponse](../../models/operations/createapplicationresponse.md)>**
+**Promise<[operations.CreateApplicationResponse](../../sdk/models/operations/createapplicationresponse.md)>**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## delete
 
@@ -89,7 +92,6 @@ const id: string = "string";
 
   const res = await sdk.application.delete(id);
 
-
   if (res.statusCode == 200) {
     // handle response
   }
@@ -106,8 +108,12 @@ const id: string = "string";
 
 ### Response
 
-**Promise<[operations.DeleteApplicationResponse](../../models/operations/deleteapplicationresponse.md)>**
+**Promise<[operations.DeleteApplicationResponse](../../sdk/models/operations/deleteapplicationresponse.md)>**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## read
 
@@ -134,7 +140,6 @@ const id: string = "string";
 
   const res = await sdk.application.read(id);
 
-
   if (res.statusCode == 200) {
     // handle response
   }
@@ -151,8 +156,12 @@ const id: string = "string";
 
 ### Response
 
-**Promise<[operations.ReadApplicationResponse](../../models/operations/readapplicationresponse.md)>**
+**Promise<[operations.ReadApplicationResponse](../../sdk/models/operations/readapplicationresponse.md)>**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## readAll
 
@@ -180,7 +189,6 @@ const size: number = 87498;
 
   const res = await sdk.application.readAll(page, size);
 
-
   if (res.statusCode == 200) {
     // handle response
   }
@@ -198,8 +206,12 @@ const size: number = 87498;
 
 ### Response
 
-**Promise<[operations.ReadAllApplicationsResponse](../../models/operations/readallapplicationsresponse.md)>**
+**Promise<[operations.ReadAllApplicationsResponse](../../sdk/models/operations/readallapplicationsresponse.md)>**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## update
 
@@ -235,7 +247,6 @@ const id: string = "string";
 
   const res = await sdk.application.update(applicationApiUpdateIn, id);
 
-
   if (res.statusCode == 200) {
     // handle response
   }
@@ -244,14 +255,18 @@ const id: string = "string";
 
 ### Parameters
 
-| Parameter                                                                      | Type                                                                           | Required                                                                       | Description                                                                    |
-| ------------------------------------------------------------------------------ | ------------------------------------------------------------------------------ | ------------------------------------------------------------------------------ | ------------------------------------------------------------------------------ |
-| `applicationApiUpdateIn`                                                       | [shared.ApplicationApiUpdateIn](../../models/shared/applicationapiupdatein.md) | :heavy_check_mark:                                                             | N/A                                                                            |
-| `id`                                                                           | *string*                                                                       | :heavy_check_mark:                                                             | The unique ID of the application                                               |
-| `config`                                                                       | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                   | :heavy_minus_sign:                                                             | Available config options for making requests.                                  |
+| Parameter                                                                             | Type                                                                                  | Required                                                                              | Description                                                                           |
+| ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- |
+| `applicationApiUpdateIn`                                                              | [shared.ApplicationApiUpdateIn](../../../sdk/models/shared/applicationapiupdatein.md) | :heavy_check_mark:                                                                    | N/A                                                                                   |
+| `id`                                                                                  | *string*                                                                              | :heavy_check_mark:                                                                    | The unique ID of the application                                                      |
+| `config`                                                                              | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                          | :heavy_minus_sign:                                                                    | Available config options for making requests.                                         |
 
 
 ### Response
 
-**Promise<[operations.Update1Response](../../models/operations/update1response.md)>**
+**Promise<[operations.Update1Response](../../sdk/models/operations/update1response.md)>**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |

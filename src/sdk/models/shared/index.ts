@@ -20,6 +20,7 @@ export * from "./pagemodeloutworkflowapiout";
 export * from "./pagemodeloutworkflowmapapiout";
 export * from "./recordapiout";
 export * from "./recorddatesapiout";
+export * from "./schemebasic";
 export * from "./security";
 export * from "./stepapicreatein";
 export * from "./stepapiout";

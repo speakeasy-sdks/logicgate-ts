@@ -1,5 +1,5 @@
 # Step
-(*.step*)
+(*step*)
 
 ## Overview
 
@@ -47,7 +47,6 @@ const stepApiCreateIn: StepApiCreateIn = {
 
   const res = await sdk.step.create(stepApiCreateIn);
 
-
   if (res.statusCode == 200) {
     // handle response
   }
@@ -56,16 +55,20 @@ const stepApiCreateIn: StepApiCreateIn = {
 
 ### Parameters
 
-| Parameter                                                        | Type                                                             | Required                                                         | Description                                                      |
-| ---------------------------------------------------------------- | ---------------------------------------------------------------- | ---------------------------------------------------------------- | ---------------------------------------------------------------- |
-| `stepApiCreateIn`                                                | [shared.StepApiCreateIn](../../models/shared/stepapicreatein.md) | :heavy_check_mark:                                               | N/A                                                              |
-| `config`                                                         | [AxiosRequestConfig](https://axios-http.com/docs/req_config)     | :heavy_minus_sign:                                               | Available config options for making requests.                    |
+| Parameter                                                               | Type                                                                    | Required                                                                | Description                                                             |
+| ----------------------------------------------------------------------- | ----------------------------------------------------------------------- | ----------------------------------------------------------------------- | ----------------------------------------------------------------------- |
+| `stepApiCreateIn`                                                       | [shared.StepApiCreateIn](../../../sdk/models/shared/stepapicreatein.md) | :heavy_check_mark:                                                      | N/A                                                                     |
+| `config`                                                                | [AxiosRequestConfig](https://axios-http.com/docs/req_config)            | :heavy_minus_sign:                                                      | Available config options for making requests.                           |
 
 
 ### Response
 
-**Promise<[operations.CreateStepResponse](../../models/operations/createstepresponse.md)>**
+**Promise<[operations.CreateStepResponse](../../sdk/models/operations/createstepresponse.md)>**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## delete
 
@@ -92,7 +95,6 @@ const id: string = "string";
 
   const res = await sdk.step.delete(id);
 
-
   if (res.statusCode == 200) {
     // handle response
   }
@@ -109,8 +111,12 @@ const id: string = "string";
 
 ### Response
 
-**Promise<[operations.DeleteStepResponse](../../models/operations/deletestepresponse.md)>**
+**Promise<[operations.DeleteStepResponse](../../sdk/models/operations/deletestepresponse.md)>**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## read
 
@@ -137,7 +143,6 @@ const id: string = "string";
 
   const res = await sdk.step.read(id);
 
-
   if (res.statusCode == 200) {
     // handle response
   }
@@ -154,8 +159,12 @@ const id: string = "string";
 
 ### Response
 
-**Promise<[operations.ReadStepResponse](../../models/operations/readstepresponse.md)>**
+**Promise<[operations.ReadStepResponse](../../sdk/models/operations/readstepresponse.md)>**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## readAll
 
@@ -184,7 +193,6 @@ const workflowId: string = "string";
 
   const res = await sdk.step.readAll(page, size, workflowId);
 
-
   if (res.statusCode == 200) {
     // handle response
   }
@@ -203,8 +211,12 @@ const workflowId: string = "string";
 
 ### Response
 
-**Promise<[operations.ReadAllStepsResponse](../../models/operations/readallstepsresponse.md)>**
+**Promise<[operations.ReadAllStepsResponse](../../sdk/models/operations/readallstepsresponse.md)>**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## update
 
@@ -241,7 +253,6 @@ const id: string = "string";
 
   const res = await sdk.step.update(stepApiUpdateIn, id);
 
-
   if (res.statusCode == 200) {
     // handle response
   }
@@ -250,14 +261,18 @@ const id: string = "string";
 
 ### Parameters
 
-| Parameter                                                        | Type                                                             | Required                                                         | Description                                                      |
-| ---------------------------------------------------------------- | ---------------------------------------------------------------- | ---------------------------------------------------------------- | ---------------------------------------------------------------- |
-| `stepApiUpdateIn`                                                | [shared.StepApiUpdateIn](../../models/shared/stepapiupdatein.md) | :heavy_check_mark:                                               | N/A                                                              |
-| `id`                                                             | *string*                                                         | :heavy_check_mark:                                               | The unique ID of the step                                        |
-| `config`                                                         | [AxiosRequestConfig](https://axios-http.com/docs/req_config)     | :heavy_minus_sign:                                               | Available config options for making requests.                    |
+| Parameter                                                               | Type                                                                    | Required                                                                | Description                                                             |
+| ----------------------------------------------------------------------- | ----------------------------------------------------------------------- | ----------------------------------------------------------------------- | ----------------------------------------------------------------------- |
+| `stepApiUpdateIn`                                                       | [shared.StepApiUpdateIn](../../../sdk/models/shared/stepapiupdatein.md) | :heavy_check_mark:                                                      | N/A                                                                     |
+| `id`                                                                    | *string*                                                                | :heavy_check_mark:                                                      | The unique ID of the step                                               |
+| `config`                                                                | [AxiosRequestConfig](https://axios-http.com/docs/req_config)            | :heavy_minus_sign:                                                      | Available config options for making requests.                           |
 
 
 ### Response
 
-**Promise<[operations.UpdateResponse](../../models/operations/updateresponse.md)>**
+**Promise<[operations.UpdateResponse](../../sdk/models/operations/updateresponse.md)>**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
