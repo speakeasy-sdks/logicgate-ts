@@ -1,6 +1,4 @@
 <!-- Start SDK Example Usage -->
-
-
 ```typescript
 import { Riskcloud } from "logicgate";
 import { CreateWorkflowRequest } from "logicgate/dist/sdk/models/operations";

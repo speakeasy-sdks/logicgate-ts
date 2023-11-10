@@ -24,6 +24,8 @@ yarn add https://github.com/speakeasy-sdks/logicgate-ts
 
 ## SDK Example Usage
 <!-- Start SDK Example Usage -->
+### Example
+
 ```typescript
 import { Riskcloud } from "logicgate";
 import { CreateWorkflowRequest } from "logicgate/dist/sdk/models/operations";
@@ -112,7 +114,7 @@ import { WorkflowApiCreateIn } from "logicgate/dist/sdk/models/shared";
 
 
 <!-- Start Error Handling -->
-# Error Handling
+## Error Handling
 
 Handling errors in this SDK should largely match your expectations.  All operations return a response object or throw an error.  If Error objects are specified in your OpenAPI Spec, the SDK will throw the appropriate Error type.
 
@@ -120,8 +122,7 @@ Handling errors in this SDK should largely match your expectations.  All operati
 | --------------- | --------------- | --------------- |
 | errors.SDKError | 400-600         | */*             |
 
-
-## Example
+Example
 
 ```typescript
 import { Riskcloud } from "logicgate";
@@ -150,9 +151,9 @@ import { GetApiTokenRequest, GetApiTokenSecurity } from "logicgate/dist/sdk/mode
 
 
 <!-- Start Server Selection -->
-# Server Selection
+## Server Selection
 
-## Select Server by Index
+### Select Server by Index
 
 You can override the default server globally by passing a server index to the `serverIdx: number` optional parameter when initializing the SDK client instance. The selected server will then be used as the default on the operations that use it. This table lists the indexes associated with the available servers:
 
@@ -160,7 +161,7 @@ You can override the default server globally by passing a server index to the `s
 | - | ------ | --------- |
 | 0 | `http://localhost` | None |
 
-For example:
+#### Example
 
 ```typescript
 import { Riskcloud } from "logicgate";
@@ -185,10 +186,9 @@ import { GetApiTokenRequest, GetApiTokenSecurity } from "logicgate/dist/sdk/mode
 ```
 
 
-## Override Server URL Per-Client
+### Override Server URL Per-Client
 
 The default server can also be overridden globally by passing a URL to the `serverURL: str` optional parameter when initializing the SDK client instance. For example:
-
 ```typescript
 import { Riskcloud } from "logicgate";
 import { GetApiTokenRequest, GetApiTokenSecurity } from "logicgate/dist/sdk/models/operations";
@@ -215,10 +215,9 @@ import { GetApiTokenRequest, GetApiTokenSecurity } from "logicgate/dist/sdk/mode
 
 
 <!-- Start Custom HTTP Client -->
-# Custom HTTP Client
+## Custom HTTP Client
 
 The Typescript SDK makes API calls using the (axios)[https://axios-http.com/docs/intro] HTTP library.  In order to provide a convenient way to configure timeouts, cookies, proxies, custom headers, and other low-level configuration, you can initialize the SDK client with a custom `AxiosInstance` object.
-
 
 For example, you could specify a header for every request that your sdk makes as follows:
 
@@ -230,7 +229,6 @@ const httpClient = axios.create({
     headers: {'x-custom-header': 'someValue'}
 })
 
-
 const sdk = new Riskcloud({defaultClient: httpClient});
 ```
 <!-- End Custom HTTP Client -->
@@ -238,9 +236,9 @@ const sdk = new Riskcloud({defaultClient: httpClient});
 
 
 <!-- Start Authentication -->
-# Authentication
+## Authentication
 
-## Per-Client Security Schemes
+### Per-Client Security Schemes
 
 This SDK supports the following security schemes globally:
 
@@ -250,7 +248,6 @@ This SDK supports the following security schemes globally:
 | `bearer`    | http        | HTTP Bearer |
 
 You can set the security parameters through the `security` optional parameter when initializing the SDK client instance. The selected scheme will be used by default to authenticate with the API for all operations that support it. For example:
-
 ```typescript
 import { Riskcloud } from "logicgate";
 import { GetApiTokenRequest, GetApiTokenSecurity } from "logicgate/dist/sdk/models/operations";
@@ -271,10 +268,9 @@ import { GetApiTokenRequest, GetApiTokenSecurity } from "logicgate/dist/sdk/mode
 
 ```
 
-## Per-Operation Security Schemes
+### Per-Operation Security Schemes
 
 Some operations in this SDK require the security scheme to be specified at the request level. For example:
-
 ```typescript
 import { Riskcloud } from "logicgate";
 import { GetApiTokenRequest, GetApiTokenSecurity } from "logicgate/dist/sdk/models/operations";
