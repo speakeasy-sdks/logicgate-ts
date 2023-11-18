@@ -1,6 +1,6 @@
 {
   "name": "logicgate",
-  "version": "0.5.3",
+  "version": "0.5.4",
   "author": "logicgate-dev",
   "scripts": {
     "prepare": "tsc --build",
