@@ -84,7 +84,6 @@ src/sdk/models/shared/schemebasic.ts
 src/sdk/models/errors/index.ts
 src/sdk/models/operations/index.ts
 src/sdk/models/shared/index.ts
-USAGE.md
 docs/sdk/models/operations/getapitokensecurity.md
 docs/sdk/models/operations/getapitokenrequest.md
 docs/sdk/models/operations/getapitokenresponse.md
@@ -196,4 +195,5 @@ docs/sdks/record/README.md
 docs/sdks/step/README.md
 docs/sdks/workflowmap/README.md
 docs/sdks/workflow/README.md
+USAGE.md
 .gitattributes

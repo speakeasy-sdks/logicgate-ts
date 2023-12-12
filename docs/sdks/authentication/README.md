@@ -21,11 +21,11 @@ Generates a new, expiring access token from the provided Client and Secret keys.
 import { Riskcloud } from "logicgate";
 import { GetApiTokenRequest, GetApiTokenSecurity } from "logicgate/dist/sdk/models/operations";
 
-(async() => {
+async function run() {
   const sdk = new Riskcloud();
 const operationSecurity: GetApiTokenSecurity = {
-  password: "",
-  username: "",
+  password: "<YOUR_PASSWORD_HERE>",
+  username: "<YOUR_USERNAME_HERE>",
 };
 
   const res = await sdk.authentication.getApiToken(operationSecurity);
@@ -33,7 +33,9 @@ const operationSecurity: GetApiTokenSecurity = {
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters

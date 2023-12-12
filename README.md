@@ -6,7 +6,7 @@
     
 </div>
 
-<!-- Start SDK Installation -->
+<!-- Start SDK Installation [installation] -->
 ## SDK Installation
 
 ### NPM
@@ -20,10 +20,11 @@ npm add https://github.com/speakeasy-sdks/logicgate-ts
 ```bash
 yarn add https://github.com/speakeasy-sdks/logicgate-ts
 ```
-<!-- End SDK Installation -->
+<!-- End SDK Installation [installation] -->
 
+<!-- Start SDK Example Usage [usage] -->
 ## SDK Example Usage
-<!-- Start SDK Example Usage -->
+
 ### Example
 
 ```typescript
@@ -31,12 +32,12 @@ import { Riskcloud } from "logicgate";
 import { CreateWorkflowRequest } from "logicgate/dist/sdk/models/operations";
 import { WorkflowApiCreateIn } from "logicgate/dist/sdk/models/shared";
 
-(async () => {
+async function run() {
     const sdk = new Riskcloud({
         security: {
             basic: {
-                password: "",
-                username: "",
+                password: "<YOUR_PASSWORD_HERE>",
+                username: "<YOUR_USERNAME_HERE>",
             },
         },
     });
@@ -53,14 +54,15 @@ import { WorkflowApiCreateIn } from "logicgate/dist/sdk/models/shared";
     if (res.statusCode == 200) {
         // handle response
     }
-})();
+}
+
+run();
 
 ```
-<!-- End SDK Example Usage -->
+<!-- End SDK Example Usage [usage] -->
 
-<!-- Start SDK Available Operations -->
+<!-- Start Available Resources and Operations [operations] -->
 ## Available Resources and Operations
-
 
 ### [authentication](docs/sdks/authentication/README.md)
 
@@ -105,15 +107,11 @@ import { WorkflowApiCreateIn } from "logicgate/dist/sdk/models/shared";
 * [read](docs/sdks/workflow/README.md#read) - Retrieve a workflow
 * [readAll](docs/sdks/workflow/README.md#readall) - Retrieve workflows
 * [update](docs/sdks/workflow/README.md#update) - Update a workflow
-<!-- End SDK Available Operations -->
-
-<!-- Start Dev Containers -->
-
-<!-- End Dev Containers -->
+<!-- End Available Resources and Operations [operations] -->
 
 
 
-<!-- Start Error Handling -->
+<!-- Start Error Handling [errors] -->
 ## Error Handling
 
 Handling errors in this SDK should largely match your expectations.  All operations return a response object or throw an error.  If Error objects are specified in your OpenAPI Spec, the SDK will throw the appropriate Error type.
@@ -128,29 +126,36 @@ Example
 import { Riskcloud } from "logicgate";
 import { GetApiTokenRequest, GetApiTokenSecurity } from "logicgate/dist/sdk/models/operations";
 
-(async () => {
+async function run() {
     const sdk = new Riskcloud();
     const operationSecurity: GetApiTokenSecurity = {
-        password: "",
-        username: "",
+        password: "<YOUR_PASSWORD_HERE>",
+        username: "<YOUR_USERNAME_HERE>",
     };
 
     let res;
     try {
         res = await sdk.authentication.getApiToken(operationSecurity);
-    } catch (e) {}
+    } catch (err) {
+        if (err instanceof errors.SDKError) {
+            console.error(err); // handle exception
+            throw err;
+        }
+    }
 
     if (res.statusCode == 200) {
         // handle response
     }
-})();
+}
+
+run();
 
 ```
-<!-- End Error Handling -->
+<!-- End Error Handling [errors] -->
 
 
 
-<!-- Start Server Selection -->
+<!-- Start Server Selection [server] -->
 ## Server Selection
 
 ### Select Server by Index
@@ -167,13 +172,13 @@ You can override the default server globally by passing a server index to the `s
 import { Riskcloud } from "logicgate";
 import { GetApiTokenRequest, GetApiTokenSecurity } from "logicgate/dist/sdk/models/operations";
 
-(async () => {
+async function run() {
     const sdk = new Riskcloud({
         serverIdx: 0,
     });
     const operationSecurity: GetApiTokenSecurity = {
-        password: "",
-        username: "",
+        password: "<YOUR_PASSWORD_HERE>",
+        username: "<YOUR_USERNAME_HERE>",
     };
 
     const res = await sdk.authentication.getApiToken(operationSecurity);
@@ -181,7 +186,9 @@ import { GetApiTokenRequest, GetApiTokenSecurity } from "logicgate/dist/sdk/mode
     if (res.statusCode == 200) {
         // handle response
     }
-})();
+}
+
+run();
 
 ```
 
@@ -193,13 +200,13 @@ The default server can also be overridden globally by passing a URL to the `serv
 import { Riskcloud } from "logicgate";
 import { GetApiTokenRequest, GetApiTokenSecurity } from "logicgate/dist/sdk/models/operations";
 
-(async () => {
+async function run() {
     const sdk = new Riskcloud({
         serverURL: "http://localhost",
     });
     const operationSecurity: GetApiTokenSecurity = {
-        password: "",
-        username: "",
+        password: "<YOUR_PASSWORD_HERE>",
+        username: "<YOUR_USERNAME_HERE>",
     };
 
     const res = await sdk.authentication.getApiToken(operationSecurity);
@@ -207,23 +214,25 @@ import { GetApiTokenRequest, GetApiTokenSecurity } from "logicgate/dist/sdk/mode
     if (res.statusCode == 200) {
         // handle response
     }
-})();
+}
+
+run();
 
 ```
-<!-- End Server Selection -->
+<!-- End Server Selection [server] -->
 
 
 
-<!-- Start Custom HTTP Client -->
+<!-- Start Custom HTTP Client [http-client] -->
 ## Custom HTTP Client
 
-The Typescript SDK makes API calls using the (axios)[https://axios-http.com/docs/intro] HTTP library.  In order to provide a convenient way to configure timeouts, cookies, proxies, custom headers, and other low-level configuration, you can initialize the SDK client with a custom `AxiosInstance` object.
+The Typescript SDK makes API calls using the [axios](https://axios-http.com/docs/intro) HTTP library.  In order to provide a convenient way to configure timeouts, cookies, proxies, custom headers, and other low-level configuration, you can initialize the SDK client with a custom `AxiosInstance` object.
 
 For example, you could specify a header for every request that your sdk makes as follows:
 
 ```typescript
-from logicgate import Riskcloud;
-import axios;
+import { logicgate } from "Riskcloud";
+import axios from "axios";
 
 const httpClient = axios.create({
     headers: {'x-custom-header': 'someValue'}
@@ -231,11 +240,11 @@ const httpClient = axios.create({
 
 const sdk = new Riskcloud({defaultClient: httpClient});
 ```
-<!-- End Custom HTTP Client -->
+<!-- End Custom HTTP Client [http-client] -->
 
 
 
-<!-- Start Authentication -->
+<!-- Start Authentication [security] -->
 ## Authentication
 
 ### Per-Client Security Schemes
@@ -250,21 +259,33 @@ This SDK supports the following security schemes globally:
 You can set the security parameters through the `security` optional parameter when initializing the SDK client instance. The selected scheme will be used by default to authenticate with the API for all operations that support it. For example:
 ```typescript
 import { Riskcloud } from "logicgate";
-import { GetApiTokenRequest, GetApiTokenSecurity } from "logicgate/dist/sdk/models/operations";
+import { CreateApplicationRequest } from "logicgate/dist/sdk/models/operations";
+import { ApplicationApiCreateIn, Icon, TypeT } from "logicgate/dist/sdk/models/shared";
 
-(async () => {
-    const sdk = new Riskcloud();
-    const operationSecurity: GetApiTokenSecurity = {
-        password: "",
-        username: "",
+async function run() {
+    const sdk = new Riskcloud({
+        security: {
+            basic: {
+                password: "<YOUR_PASSWORD_HERE>",
+                username: "<YOUR_USERNAME_HERE>",
+            },
+        },
+    });
+    const applicationApiCreateIn: ApplicationApiCreateIn = {
+        color: "#00a3de",
+        icon: Icon.Cubes,
+        name: "Cyber Risk Management Application",
+        type: TypeT.ControlsCompliance,
     };
 
-    const res = await sdk.authentication.getApiToken(operationSecurity);
+    const res = await sdk.application.create(applicationApiCreateIn);
 
     if (res.statusCode == 200) {
         // handle response
     }
-})();
+}
+
+run();
 
 ```
 
@@ -275,11 +296,11 @@ Some operations in this SDK require the security scheme to be specified at the r
 import { Riskcloud } from "logicgate";
 import { GetApiTokenRequest, GetApiTokenSecurity } from "logicgate/dist/sdk/models/operations";
 
-(async () => {
+async function run() {
     const sdk = new Riskcloud();
     const operationSecurity: GetApiTokenSecurity = {
-        password: "",
-        username: "",
+        password: "<YOUR_PASSWORD_HERE>",
+        username: "<YOUR_USERNAME_HERE>",
     };
 
     const res = await sdk.authentication.getApiToken(operationSecurity);
@@ -287,10 +308,12 @@ import { GetApiTokenRequest, GetApiTokenSecurity } from "logicgate/dist/sdk/mode
     if (res.statusCode == 200) {
         // handle response
     }
-})();
+}
+
+run();
 
 ```
-<!-- End Authentication -->
+<!-- End Authentication [security] -->
 
 <!-- Placeholder for Future Speakeasy SDK Sections -->
 

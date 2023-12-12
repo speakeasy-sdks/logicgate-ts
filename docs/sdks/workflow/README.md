@@ -26,12 +26,12 @@ import { Riskcloud } from "logicgate";
 import { CreateWorkflowRequest } from "logicgate/dist/sdk/models/operations";
 import { WorkflowApiCreateIn } from "logicgate/dist/sdk/models/shared";
 
-(async() => {
+async function run() {
   const sdk = new Riskcloud({
     security: {
       basic: {
-        password: "",
-        username: "",
+        password: "<YOUR_PASSWORD_HERE>",
+        username: "<YOUR_USERNAME_HERE>",
       },
     },
   });
@@ -48,15 +48,17 @@ const workflowApiCreateIn: WorkflowApiCreateIn = {
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
 
-| Parameter                                                                       | Type                                                                            | Required                                                                        | Description                                                                     |
-| ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- |
-| `workflowApiCreateIn`                                                           | [shared.WorkflowApiCreateIn](../../../sdk/models/shared/workflowapicreatein.md) | :heavy_check_mark:                                                              | N/A                                                                             |
-| `config`                                                                        | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                    | :heavy_minus_sign:                                                              | Available config options for making requests.                                   |
+| Parameter                                                                    | Type                                                                         | Required                                                                     | Description                                                                  |
+| ---------------------------------------------------------------------------- | ---------------------------------------------------------------------------- | ---------------------------------------------------------------------------- | ---------------------------------------------------------------------------- |
+| `workflowApiCreateIn`                                                        | [shared.WorkflowApiCreateIn](../../sdk/models/shared/workflowapicreatein.md) | :heavy_check_mark:                                                           | N/A                                                                          |
+| `config`                                                                     | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                 | :heavy_minus_sign:                                                           | Available config options for making requests.                                |
 
 
 ### Response
@@ -80,12 +82,12 @@ Delete a workflow specified by the ID in the URL path.
 import { Riskcloud } from "logicgate";
 import { DeleteWorkflowRequest } from "logicgate/dist/sdk/models/operations";
 
-(async() => {
+async function run() {
   const sdk = new Riskcloud({
     security: {
       basic: {
-        password: "",
-        username: "",
+        password: "<YOUR_PASSWORD_HERE>",
+        username: "<YOUR_USERNAME_HERE>",
       },
     },
   });
@@ -96,7 +98,9 @@ const id: string = "string";
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
@@ -128,12 +132,12 @@ Retrieve a workflow specified by the ID in the URL path.
 import { Riskcloud } from "logicgate";
 import { ReadWorkflowRequest } from "logicgate/dist/sdk/models/operations";
 
-(async() => {
+async function run() {
   const sdk = new Riskcloud({
     security: {
       basic: {
-        password: "",
-        username: "",
+        password: "<YOUR_PASSWORD_HERE>",
+        username: "<YOUR_USERNAME_HERE>",
       },
     },
   });
@@ -144,7 +148,9 @@ const id: string = "string";
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
@@ -176,12 +182,12 @@ Retrieve a page of all workflows that the current user has [Build Access to pare
 import { Riskcloud } from "logicgate";
 import { ReadAllWorkflowsRequest } from "logicgate/dist/sdk/models/operations";
 
-(async() => {
+async function run() {
   const sdk = new Riskcloud({
     security: {
       basic: {
-        password: "",
-        username: "",
+        password: "<YOUR_PASSWORD_HERE>",
+        username: "<YOUR_USERNAME_HERE>",
       },
     },
   });
@@ -195,7 +201,9 @@ const size: number = 87498;
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
@@ -231,12 +239,12 @@ import { Riskcloud } from "logicgate";
 import { UpdateWorkflowRequest } from "logicgate/dist/sdk/models/operations";
 import { WorkflowApiUpdateIn } from "logicgate/dist/sdk/models/shared";
 
-(async() => {
+async function run() {
   const sdk = new Riskcloud({
     security: {
       basic: {
-        password: "",
-        username: "",
+        password: "<YOUR_PASSWORD_HERE>",
+        username: "<YOUR_USERNAME_HERE>",
       },
     },
   });
@@ -253,16 +261,18 @@ const id: string = "string";
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
 
-| Parameter                                                                       | Type                                                                            | Required                                                                        | Description                                                                     |
-| ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- |
-| `workflowApiUpdateIn`                                                           | [shared.WorkflowApiUpdateIn](../../../sdk/models/shared/workflowapiupdatein.md) | :heavy_check_mark:                                                              | N/A                                                                             |
-| `id`                                                                            | *string*                                                                        | :heavy_check_mark:                                                              | The unique ID of the workflow                                                   |
-| `config`                                                                        | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                    | :heavy_minus_sign:                                                              | Available config options for making requests.                                   |
+| Parameter                                                                    | Type                                                                         | Required                                                                     | Description                                                                  |
+| ---------------------------------------------------------------------------- | ---------------------------------------------------------------------------- | ---------------------------------------------------------------------------- | ---------------------------------------------------------------------------- |
+| `workflowApiUpdateIn`                                                        | [shared.WorkflowApiUpdateIn](../../sdk/models/shared/workflowapiupdatein.md) | :heavy_check_mark:                                                           | N/A                                                                          |
+| `id`                                                                         | *string*                                                                     | :heavy_check_mark:                                                           | The unique ID of the workflow                                                |
+| `config`                                                                     | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                 | :heavy_minus_sign:                                                           | Available config options for making requests.                                |
 
 
 ### Response

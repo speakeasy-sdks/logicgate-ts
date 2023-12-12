@@ -21,12 +21,12 @@ Retrieve a page of all fields whose parent application the current user has [Bui
 import { Riskcloud } from "logicgate";
 import { FieldTypeFilter } from "logicgate/dist/sdk/models/operations";
 
-(async() => {
+async function run() {
   const sdk = new Riskcloud({
     security: {
       basic: {
-        password: "",
-        username: "",
+        password: "<YOUR_PASSWORD_HERE>",
+        username: "<YOUR_USERNAME_HERE>",
       },
     },
   });
@@ -36,7 +36,9 @@ import { FieldTypeFilter } from "logicgate/dist/sdk/models/operations";
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters

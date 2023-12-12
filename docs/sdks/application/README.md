@@ -26,12 +26,12 @@ import { Riskcloud } from "logicgate";
 import { CreateApplicationRequest } from "logicgate/dist/sdk/models/operations";
 import { ApplicationApiCreateIn, Icon, TypeT } from "logicgate/dist/sdk/models/shared";
 
-(async() => {
+async function run() {
   const sdk = new Riskcloud({
     security: {
       basic: {
-        password: "",
-        username: "",
+        password: "<YOUR_PASSWORD_HERE>",
+        username: "<YOUR_USERNAME_HERE>",
       },
     },
   });
@@ -47,15 +47,17 @@ const applicationApiCreateIn: ApplicationApiCreateIn = {
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
 
-| Parameter                                                                             | Type                                                                                  | Required                                                                              | Description                                                                           |
-| ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- |
-| `applicationApiCreateIn`                                                              | [shared.ApplicationApiCreateIn](../../../sdk/models/shared/applicationapicreatein.md) | :heavy_check_mark:                                                                    | N/A                                                                                   |
-| `config`                                                                              | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                          | :heavy_minus_sign:                                                                    | Available config options for making requests.                                         |
+| Parameter                                                                          | Type                                                                               | Required                                                                           | Description                                                                        |
+| ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- |
+| `applicationApiCreateIn`                                                           | [shared.ApplicationApiCreateIn](../../sdk/models/shared/applicationapicreatein.md) | :heavy_check_mark:                                                                 | N/A                                                                                |
+| `config`                                                                           | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                       | :heavy_minus_sign:                                                                 | Available config options for making requests.                                      |
 
 
 ### Response
@@ -79,12 +81,12 @@ Delete an application specified by the ID in the URL path.
 import { Riskcloud } from "logicgate";
 import { DeleteApplicationRequest } from "logicgate/dist/sdk/models/operations";
 
-(async() => {
+async function run() {
   const sdk = new Riskcloud({
     security: {
       basic: {
-        password: "",
-        username: "",
+        password: "<YOUR_PASSWORD_HERE>",
+        username: "<YOUR_USERNAME_HERE>",
       },
     },
   });
@@ -95,7 +97,9 @@ const id: string = "string";
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
@@ -127,12 +131,12 @@ Retrieve an application specified by the ID in the URL path.
 import { Riskcloud } from "logicgate";
 import { ReadApplicationRequest } from "logicgate/dist/sdk/models/operations";
 
-(async() => {
+async function run() {
   const sdk = new Riskcloud({
     security: {
       basic: {
-        password: "",
-        username: "",
+        password: "<YOUR_PASSWORD_HERE>",
+        username: "<YOUR_USERNAME_HERE>",
       },
     },
   });
@@ -143,7 +147,9 @@ const id: string = "string";
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
@@ -175,12 +181,12 @@ Retrieve a page of all applications that the current user has [Build Access](htt
 import { Riskcloud } from "logicgate";
 import { ReadAllApplicationsRequest } from "logicgate/dist/sdk/models/operations";
 
-(async() => {
+async function run() {
   const sdk = new Riskcloud({
     security: {
       basic: {
-        password: "",
-        username: "",
+        password: "<YOUR_PASSWORD_HERE>",
+        username: "<YOUR_USERNAME_HERE>",
       },
     },
   });
@@ -192,7 +198,9 @@ const size: number = 87498;
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
@@ -226,12 +234,12 @@ import { Riskcloud } from "logicgate";
 import { Update1Request } from "logicgate/dist/sdk/models/operations";
 import { ApplicationApiUpdateIn, ApplicationApiUpdateInIcon, ApplicationApiUpdateInType } from "logicgate/dist/sdk/models/shared";
 
-(async() => {
+async function run() {
   const sdk = new Riskcloud({
     security: {
       basic: {
-        password: "",
-        username: "",
+        password: "<YOUR_PASSWORD_HERE>",
+        username: "<YOUR_USERNAME_HERE>",
       },
     },
   });
@@ -250,16 +258,18 @@ const id: string = "string";
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
 
-| Parameter                                                                             | Type                                                                                  | Required                                                                              | Description                                                                           |
-| ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- |
-| `applicationApiUpdateIn`                                                              | [shared.ApplicationApiUpdateIn](../../../sdk/models/shared/applicationapiupdatein.md) | :heavy_check_mark:                                                                    | N/A                                                                                   |
-| `id`                                                                                  | *string*                                                                              | :heavy_check_mark:                                                                    | The unique ID of the application                                                      |
-| `config`                                                                              | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                          | :heavy_minus_sign:                                                                    | Available config options for making requests.                                         |
+| Parameter                                                                          | Type                                                                               | Required                                                                           | Description                                                                        |
+| ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- |
+| `applicationApiUpdateIn`                                                           | [shared.ApplicationApiUpdateIn](../../sdk/models/shared/applicationapiupdatein.md) | :heavy_check_mark:                                                                 | N/A                                                                                |
+| `id`                                                                               | *string*                                                                           | :heavy_check_mark:                                                                 | The unique ID of the application                                                   |
+| `config`                                                                           | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                       | :heavy_minus_sign:                                                                 | Available config options for making requests.                                      |
 
 
 ### Response

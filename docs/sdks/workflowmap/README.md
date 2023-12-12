@@ -26,12 +26,12 @@ import { Riskcloud } from "logicgate";
 import { CreateWorkflowMapRequest } from "logicgate/dist/sdk/models/operations";
 import { Relationship, WorkflowMapApiCreateIn } from "logicgate/dist/sdk/models/shared";
 
-(async() => {
+async function run() {
   const sdk = new Riskcloud({
     security: {
       basic: {
-        password: "",
-        username: "",
+        password: "<YOUR_PASSWORD_HERE>",
+        username: "<YOUR_USERNAME_HERE>",
       },
     },
   });
@@ -46,15 +46,17 @@ const workflowMapApiCreateIn: WorkflowMapApiCreateIn = {
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
 
-| Parameter                                                                             | Type                                                                                  | Required                                                                              | Description                                                                           |
-| ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- |
-| `workflowMapApiCreateIn`                                                              | [shared.WorkflowMapApiCreateIn](../../../sdk/models/shared/workflowmapapicreatein.md) | :heavy_check_mark:                                                                    | N/A                                                                                   |
-| `config`                                                                              | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                          | :heavy_minus_sign:                                                                    | Available config options for making requests.                                         |
+| Parameter                                                                          | Type                                                                               | Required                                                                           | Description                                                                        |
+| ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- |
+| `workflowMapApiCreateIn`                                                           | [shared.WorkflowMapApiCreateIn](../../sdk/models/shared/workflowmapapicreatein.md) | :heavy_check_mark:                                                                 | N/A                                                                                |
+| `config`                                                                           | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                       | :heavy_minus_sign:                                                                 | Available config options for making requests.                                      |
 
 
 ### Response
@@ -78,12 +80,12 @@ Delete a workflow map specified by the ID in the URL path.
 import { Riskcloud } from "logicgate";
 import { DeleteWorkflowMapRequest } from "logicgate/dist/sdk/models/operations";
 
-(async() => {
+async function run() {
   const sdk = new Riskcloud({
     security: {
       basic: {
-        password: "",
-        username: "",
+        password: "<YOUR_PASSWORD_HERE>",
+        username: "<YOUR_USERNAME_HERE>",
       },
     },
   });
@@ -94,7 +96,9 @@ const id: string = "string";
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
@@ -126,12 +130,12 @@ Retrieve a workflow map specified by the ID in the URL path.
 import { Riskcloud } from "logicgate";
 import { ReadWorkflowMapRequest } from "logicgate/dist/sdk/models/operations";
 
-(async() => {
+async function run() {
   const sdk = new Riskcloud({
     security: {
       basic: {
-        password: "",
-        username: "",
+        password: "<YOUR_PASSWORD_HERE>",
+        username: "<YOUR_USERNAME_HERE>",
       },
     },
   });
@@ -142,7 +146,9 @@ const id: string = "string";
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
@@ -174,12 +180,12 @@ Retrieve a page of all workflow maps that the current user has [Build Access to 
 import { Riskcloud } from "logicgate";
 import { ReadAllWorkflowMapsRequest } from "logicgate/dist/sdk/models/operations";
 
-(async() => {
+async function run() {
   const sdk = new Riskcloud({
     security: {
       basic: {
-        password: "",
-        username: "",
+        password: "<YOUR_PASSWORD_HERE>",
+        username: "<YOUR_USERNAME_HERE>",
       },
     },
   });
@@ -192,7 +198,9 @@ const workflowId: string = "string";
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
@@ -227,12 +235,12 @@ import { Riskcloud } from "logicgate";
 import { UpdateWorkflowMapRequest } from "logicgate/dist/sdk/models/operations";
 import { WorkflowMapApiUpdateIn, WorkflowMapApiUpdateInRelationship } from "logicgate/dist/sdk/models/shared";
 
-(async() => {
+async function run() {
   const sdk = new Riskcloud({
     security: {
       basic: {
-        password: "",
-        username: "",
+        password: "<YOUR_PASSWORD_HERE>",
+        username: "<YOUR_USERNAME_HERE>",
       },
     },
   });
@@ -246,16 +254,18 @@ const id: string = "string";
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
 
-| Parameter                                                                             | Type                                                                                  | Required                                                                              | Description                                                                           |
-| ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- |
-| `workflowMapApiUpdateIn`                                                              | [shared.WorkflowMapApiUpdateIn](../../../sdk/models/shared/workflowmapapiupdatein.md) | :heavy_check_mark:                                                                    | N/A                                                                                   |
-| `id`                                                                                  | *string*                                                                              | :heavy_check_mark:                                                                    | The unique ID of the workflow map                                                     |
-| `config`                                                                              | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                          | :heavy_minus_sign:                                                                    | Available config options for making requests.                                         |
+| Parameter                                                                          | Type                                                                               | Required                                                                           | Description                                                                        |
+| ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- |
+| `workflowMapApiUpdateIn`                                                           | [shared.WorkflowMapApiUpdateIn](../../sdk/models/shared/workflowmapapiupdatein.md) | :heavy_check_mark:                                                                 | N/A                                                                                |
+| `id`                                                                               | *string*                                                                           | :heavy_check_mark:                                                                 | The unique ID of the workflow map                                                  |
+| `config`                                                                           | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                       | :heavy_minus_sign:                                                                 | Available config options for making requests.                                      |
 
 
 ### Response

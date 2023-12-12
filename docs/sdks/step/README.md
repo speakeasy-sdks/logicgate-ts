@@ -26,12 +26,12 @@ import { Riskcloud } from "logicgate";
 import { CreateStepRequest } from "logicgate/dist/sdk/models/operations";
 import { AssignableUserType, StepApiCreateIn } from "logicgate/dist/sdk/models/shared";
 
-(async() => {
+async function run() {
   const sdk = new Riskcloud({
     security: {
       basic: {
-        password: "",
-        username: "",
+        password: "<YOUR_PASSWORD_HERE>",
+        username: "<YOUR_USERNAME_HERE>",
       },
     },
   });
@@ -50,15 +50,17 @@ const stepApiCreateIn: StepApiCreateIn = {
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
 
-| Parameter                                                               | Type                                                                    | Required                                                                | Description                                                             |
-| ----------------------------------------------------------------------- | ----------------------------------------------------------------------- | ----------------------------------------------------------------------- | ----------------------------------------------------------------------- |
-| `stepApiCreateIn`                                                       | [shared.StepApiCreateIn](../../../sdk/models/shared/stepapicreatein.md) | :heavy_check_mark:                                                      | N/A                                                                     |
-| `config`                                                                | [AxiosRequestConfig](https://axios-http.com/docs/req_config)            | :heavy_minus_sign:                                                      | Available config options for making requests.                           |
+| Parameter                                                            | Type                                                                 | Required                                                             | Description                                                          |
+| -------------------------------------------------------------------- | -------------------------------------------------------------------- | -------------------------------------------------------------------- | -------------------------------------------------------------------- |
+| `stepApiCreateIn`                                                    | [shared.StepApiCreateIn](../../sdk/models/shared/stepapicreatein.md) | :heavy_check_mark:                                                   | N/A                                                                  |
+| `config`                                                             | [AxiosRequestConfig](https://axios-http.com/docs/req_config)         | :heavy_minus_sign:                                                   | Available config options for making requests.                        |
 
 
 ### Response
@@ -82,12 +84,12 @@ Delete a step specified by the ID in the URL path.
 import { Riskcloud } from "logicgate";
 import { DeleteStepRequest } from "logicgate/dist/sdk/models/operations";
 
-(async() => {
+async function run() {
   const sdk = new Riskcloud({
     security: {
       basic: {
-        password: "",
-        username: "",
+        password: "<YOUR_PASSWORD_HERE>",
+        username: "<YOUR_USERNAME_HERE>",
       },
     },
   });
@@ -98,7 +100,9 @@ const id: string = "string";
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
@@ -130,12 +134,12 @@ Retrieve a step specified by the ID in the URL path.
 import { Riskcloud } from "logicgate";
 import { ReadStepRequest } from "logicgate/dist/sdk/models/operations";
 
-(async() => {
+async function run() {
   const sdk = new Riskcloud({
     security: {
       basic: {
-        password: "",
-        username: "",
+        password: "<YOUR_PASSWORD_HERE>",
+        username: "<YOUR_USERNAME_HERE>",
       },
     },
   });
@@ -146,7 +150,9 @@ const id: string = "string";
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
@@ -178,12 +184,12 @@ Retrieve a page of all steps that the current user has [Build Access to parent a
 import { Riskcloud } from "logicgate";
 import { ReadAllStepsRequest } from "logicgate/dist/sdk/models/operations";
 
-(async() => {
+async function run() {
   const sdk = new Riskcloud({
     security: {
       basic: {
-        password: "",
-        username: "",
+        password: "<YOUR_PASSWORD_HERE>",
+        username: "<YOUR_USERNAME_HERE>",
       },
     },
   });
@@ -196,7 +202,9 @@ const workflowId: string = "string";
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
@@ -231,12 +239,12 @@ import { Riskcloud } from "logicgate";
 import { UpdateRequest } from "logicgate/dist/sdk/models/operations";
 import { StepApiUpdateIn, StepApiUpdateInAssignableUserType, StepApiUpdateInType } from "logicgate/dist/sdk/models/shared";
 
-(async() => {
+async function run() {
   const sdk = new Riskcloud({
     security: {
       basic: {
-        password: "",
-        username: "",
+        password: "<YOUR_PASSWORD_HERE>",
+        username: "<YOUR_USERNAME_HERE>",
       },
     },
   });
@@ -256,16 +264,18 @@ const id: string = "string";
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
 
-| Parameter                                                               | Type                                                                    | Required                                                                | Description                                                             |
-| ----------------------------------------------------------------------- | ----------------------------------------------------------------------- | ----------------------------------------------------------------------- | ----------------------------------------------------------------------- |
-| `stepApiUpdateIn`                                                       | [shared.StepApiUpdateIn](../../../sdk/models/shared/stepapiupdatein.md) | :heavy_check_mark:                                                      | N/A                                                                     |
-| `id`                                                                    | *string*                                                                | :heavy_check_mark:                                                      | The unique ID of the step                                               |
-| `config`                                                                | [AxiosRequestConfig](https://axios-http.com/docs/req_config)            | :heavy_minus_sign:                                                      | Available config options for making requests.                           |
+| Parameter                                                            | Type                                                                 | Required                                                             | Description                                                          |
+| -------------------------------------------------------------------- | -------------------------------------------------------------------- | -------------------------------------------------------------------- | -------------------------------------------------------------------- |
+| `stepApiUpdateIn`                                                    | [shared.StepApiUpdateIn](../../sdk/models/shared/stepapiupdatein.md) | :heavy_check_mark:                                                   | N/A                                                                  |
+| `id`                                                                 | *string*                                                             | :heavy_check_mark:                                                   | The unique ID of the step                                            |
+| `config`                                                             | [AxiosRequestConfig](https://axios-http.com/docs/req_config)         | :heavy_minus_sign:                                                   | Available config options for making requests.                        |
 
 
 ### Response
