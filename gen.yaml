@@ -2,25 +2,27 @@ configVersion: 1.0.0
 management:
   docChecksum: ceadd3575123b52c9f910e72940b1793
   docVersion: v2023.10.0
-  speakeasyVersion: 1.126.0
-  generationVersion: 2.213.3
+  speakeasyVersion: 1.127.0
+  generationVersion: 2.220.0
 generation:
   comments: {}
   sdkClassName: riskcloud
   repoURL: https://github.com/speakeasy-sdks/logicgate-ts.git
   usageSnippets:
     optionalPropertyRendering: withExample
+  fixes:
+    nameResolutionDec2023: false
 features:
   typescript:
-    core: 3.3.0
+    core: 3.3.9
     examples: 2.81.3
     flattening: 2.81.1
-    globalSecurity: 2.82.1
+    globalSecurity: 2.82.2
     globalServerURLs: 2.82.1
     methodSecurity: 2.82.0
     nameOverrides: 2.81.1
 typescript:
-  version: 0.6.0
+  version: 0.6.1
   author: logicgate-dev
   clientServerStatusCodesAsErrors: true
   flattenGlobalSecurity: true
