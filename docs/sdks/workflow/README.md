@@ -91,7 +91,7 @@ async function run() {
       },
     },
   });
-const id: string = "string";
+const id: string = "<value>";
 
   const res = await sdk.workflow.delete(id);
 
@@ -141,7 +141,7 @@ async function run() {
       },
     },
   });
-const id: string = "string";
+const id: string = "<value>";
 
   const res = await sdk.workflow.read(id);
 
@@ -191,7 +191,7 @@ async function run() {
       },
     },
   });
-const applicationId: string = "string";
+const applicationId: string = "<value>";
 const includeJiraWorkflows: boolean = false;
 const page: number = 853380;
 const size: number = 87498;
@@ -254,7 +254,7 @@ const workflowApiUpdateIn: WorkflowApiUpdateIn = {
   xpos: 20,
   ypos: 20,
 };
-const id: string = "string";
+const id: string = "<value>";
 
   const res = await sdk.workflow.update(workflowApiUpdateIn, id);
 

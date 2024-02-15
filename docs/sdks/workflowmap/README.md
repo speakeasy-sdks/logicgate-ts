@@ -89,7 +89,7 @@ async function run() {
       },
     },
   });
-const id: string = "string";
+const id: string = "<value>";
 
   const res = await sdk.workflowMap.delete(id);
 
@@ -139,7 +139,7 @@ async function run() {
       },
     },
   });
-const id: string = "string";
+const id: string = "<value>";
 
   const res = await sdk.workflowMap.read(id);
 
@@ -191,7 +191,7 @@ async function run() {
   });
 const page: number = 853380;
 const size: number = 87498;
-const workflowId: string = "string";
+const workflowId: string = "<value>";
 
   const res = await sdk.workflowMap.readAll(page, size, workflowId);
 
@@ -247,7 +247,7 @@ async function run() {
 const workflowMapApiUpdateIn: WorkflowMapApiUpdateIn = {
   relationship: WorkflowMapApiUpdateInRelationship.ManyToMany,
 };
-const id: string = "string";
+const id: string = "<value>";
 
   const res = await sdk.workflowMap.update(workflowMapApiUpdateIn, id);
 

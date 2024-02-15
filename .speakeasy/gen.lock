@@ -4,15 +4,15 @@ management:
   docChecksum: ceadd3575123b52c9f910e72940b1793
   docVersion: v2023.10.0
   speakeasyVersion: internal
-  generationVersion: 2.225.2
-  releaseVersion: 0.6.1
-  configChecksum: 9afca0be80418c718366c1528b9e9d93
+  generationVersion: 2.258.0
+  releaseVersion: 0.6.2
+  configChecksum: 229036c530fab4391fe4f96528081dc2
   repoURL: https://github.com/speakeasy-sdks/logicgate-ts.git
   repoSubDirectory: .
   installationURL: https://github.com/speakeasy-sdks/logicgate-ts
 features:
   typescript:
-    core: 3.4.1
+    core: 3.4.7
     examples: 2.81.3
     flattening: 2.81.1
     globalSecurity: 2.82.2

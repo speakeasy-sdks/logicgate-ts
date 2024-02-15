@@ -93,7 +93,7 @@ async function run() {
       },
     },
   });
-const id: string = "string";
+const id: string = "<value>";
 
   const res = await sdk.step.delete(id);
 
@@ -143,7 +143,7 @@ async function run() {
       },
     },
   });
-const id: string = "string";
+const id: string = "<value>";
 
   const res = await sdk.step.read(id);
 
@@ -195,7 +195,7 @@ async function run() {
   });
 const page: number = 853380;
 const size: number = 87498;
-const workflowId: string = "string";
+const workflowId: string = "<value>";
 
   const res = await sdk.step.readAll(page, size, workflowId);
 
@@ -257,7 +257,7 @@ const stepApiUpdateIn: StepApiUpdateIn = {
   xpos: 20,
   ypos: 20,
 };
-const id: string = "string";
+const id: string = "<value>";
 
   const res = await sdk.step.update(stepApiUpdateIn, id);
 

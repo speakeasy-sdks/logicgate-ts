@@ -5,8 +5,10 @@ generation:
     optionalPropertyRendering: withExample
   fixes:
     nameResolutionDec2023: false
+    parameterOrderingFeb2024: false
+    requestResponseComponentNamesFeb2024: false
 typescript:
-  version: 0.6.1
+  version: 0.6.2
   author: logicgate-dev
   clientServerStatusCodesAsErrors: true
   flattenGlobalSecurity: true
