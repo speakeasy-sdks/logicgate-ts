@@ -6,14 +6,6 @@ import { SpeakeasyBase, SpeakeasyMetadata } from "../../../internal/utils";
 import * as shared from "../../../sdk/models/shared";
 import { AxiosResponse } from "axios";
 
-export class GetApiTokenSecurity extends SpeakeasyBase {
-    @SpeakeasyMetadata({ data: "security, scheme=true;type=http;subtype=basic;name=password" })
-    password: string;
-
-    @SpeakeasyMetadata({ data: "security, scheme=true;type=http;subtype=basic;name=username" })
-    username: string;
-}
-
 export class GetApiTokenRequest extends SpeakeasyBase {}
 
 export class GetApiTokenResponse extends SpeakeasyBase {

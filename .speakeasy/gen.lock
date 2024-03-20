@@ -3,10 +3,10 @@ id: d9e8eff0-4601-4b50-a3b7-834bffd453dd
 management:
   docChecksum: ceadd3575123b52c9f910e72940b1793
   docVersion: v2023.10.0
-  speakeasyVersion: 1.207.1
-  generationVersion: 2.280.6
-  releaseVersion: 0.6.3
-  configChecksum: 6c46138e6726c9808eab58e9769605eb
+  speakeasyVersion: 1.213.0
+  generationVersion: 2.283.1
+  releaseVersion: 0.7.0
+  configChecksum: f579baea841b69b27f6b0b170ce0d568
   repoURL: https://github.com/speakeasy-sdks/logicgate-ts.git
   repoSubDirectory: .
   installationURL: https://github.com/speakeasy-sdks/logicgate-ts
@@ -15,9 +15,8 @@ features:
     core: 3.4.8
     examples: 2.81.3
     flattening: 2.81.1
-    globalSecurity: 2.82.4
+    globalSecurity: 2.82.5
     globalServerURLs: 2.82.2
-    methodSecurity: 2.82.0
     nameOverrides: 2.81.1
 generatedFiles:
   - src/sdk/authentication.ts
@@ -106,7 +105,6 @@ generatedFiles:
   - src/sdk/models/errors/index.ts
   - src/sdk/models/operations/index.ts
   - src/sdk/models/shared/index.ts
-  - docs/sdk/models/operations/getapitokensecurity.md
   - docs/sdk/models/operations/getapitokenrequest.md
   - docs/sdk/models/operations/getapitokenresponse.md
   - docs/sdk/models/operations/createapplicationrequest.md
